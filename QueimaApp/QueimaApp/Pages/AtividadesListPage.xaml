@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QueimaApp.Pages.AtividadesListPage"
+             xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp" >
+  <ContentPage.ToolbarItems>
+  </ContentPage.ToolbarItems>
+  <local:BasePage.Content>
+    <ListView ItemsSource="{Binding Atividades}" SelectedItem="{Binding SelectedAtividade}" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Nome}" Detail="{Binding Data}"></TextCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </local:BasePage.Content>
+</local:BasePage>
