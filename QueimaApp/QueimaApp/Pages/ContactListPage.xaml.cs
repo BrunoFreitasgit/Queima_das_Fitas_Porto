@@ -10,9 +10,15 @@ namespace QueimaApp.Pages
 {
     public partial class ContactListPage : BasePage
     {
+
         public ContactListPage()
         {
             InitializeComponent();
+        }
+        protected override void OnAppearing()
+        {
+            listView.SelectedItem = null;
+            base.OnAppearing();
         }
     }
 }

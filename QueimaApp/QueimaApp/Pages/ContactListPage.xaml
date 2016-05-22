@@ -7,7 +7,7 @@
     <!-- <ToolbarItem Name="Add" Command="{Binding AddContact}" Order="Primary" Priority="0" /> -->
   </ContentPage.ToolbarItems>
   <local:BasePage.Content>
-    <ListView ItemsSource="{Binding Contacts}" SelectedItem="{Binding SelectedContact}" >
+    <ListView ItemsSource="{Binding Contacts}" SelectedItem="{Binding SelectedContact}" x:Name="listView">
       <ListView.ItemTemplate>
         <DataTemplate>
           <TextCell Text="{Binding Name}" Detail="{Binding Phone}"></TextCell>

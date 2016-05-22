@@ -35,11 +35,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="App.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\EmbeddedImageResourceExtension.cs" />
     <Compile Include="Interfaces\IDatabaseService.cs" />
     <Compile Include="LaunchPage.cs" />
     <Compile Include="Models\AtividadeAcademica.cs" />
+    <Compile Include="Models\Bilhete.cs" />
+    <Compile Include="Models\Bilheteira.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\PontoVenda.cs" />
+    <Compile Include="PageModels\BilhetesPageModel.cs" />
+    <Compile Include="PageModels\PontoVendaListPageModel.cs" />
+    <Compile Include="PageModels\PontoVendaPageModel.cs" />
+    <Compile Include="Pages\AtividadeAcademicaPage.cs" />
+    <Compile Include="Pages\BilheteiraPage.cs" />
     <Compile Include="Pages\MasterPageItem.cs" />
     <Compile Include="Models\Quote.cs" />
     <Compile Include="PageModels\AtividadeAcademicaPageModel.cs" />
@@ -50,9 +61,6 @@
     <Compile Include="PageModels\ModalPageModel.cs" />
     <Compile Include="PageModels\QuoteListPageModel.cs" />
     <Compile Include="PageModels\QuotePageModel.cs" />
-    <Compile Include="Pages\AtividadeAcademicaPage.xaml.cs">
-      <DependentUpon>AtividadeAcademicaPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AtividadesListPage.xaml.cs">
       <DependentUpon>AtividadesListPage.xaml</DependentUpon>
     </Compile>
@@ -84,6 +92,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FreshEssentials, Version=1.0.5976.18464, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreshEssentials.2.0.1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshEssentials.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FreshIOC, Version=1.0.5977.25641, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FreshMvvm.2.1.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshIOC.dll</HintPath>
       <Private>True</Private>
@@ -185,7 +197,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\AtividadeAcademicaPage.xaml">
+    <EmbeddedResource Include="App.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

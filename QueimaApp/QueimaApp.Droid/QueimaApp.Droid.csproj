@@ -182,6 +182,21 @@
     <AndroidResource Include="Resources\drawable\document.png" />
     <AndroidResource Include="Resources\drawable\Home.png" />
     <AndroidResource Include="Resources\drawable\Menu.png" />
+    <AndroidResource Include="Resources\drawable\BaileGala.jpg" />
+    <AndroidResource Include="Resources\drawable\ChaDancante.jpg" />
+    <AndroidResource Include="Resources\drawable\Cortejo.jpg" />
+    <AndroidResource Include="Resources\drawable\DiaBeneficiencia.jpg" />
+    <AndroidResource Include="Resources\drawable\ECAP.jpg" />
+    <AndroidResource Include="Resources\drawable\FITA.jpg" />
+    <AndroidResource Include="Resources\drawable\MissaBencao.jpg" />
+    <AndroidResource Include="Resources\drawable\MonumentalSerenata.jpg" />
+    <AndroidResource Include="Resources\drawable\Promenade.jpg" />
+    <AndroidResource Include="Resources\drawable\RallyPaper.jpg" />
+    <AndroidResource Include="Resources\drawable\Sarau.jpg" />
+    <AndroidResource Include="Resources\drawable\pin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\pin.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\style.xml" />

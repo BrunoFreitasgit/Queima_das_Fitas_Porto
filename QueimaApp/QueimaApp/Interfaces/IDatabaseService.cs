@@ -18,6 +18,6 @@ namespace QueimaApp.Interfaces
         void UpdateQuote(Quote quote);
 
         List<AtividadeAcademica> GetAtividades();
-
+        List<PontoVenda> GetPontosVenda();
     }
 }

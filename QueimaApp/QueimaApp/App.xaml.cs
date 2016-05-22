@@ -1,19 +1,20 @@
 ﻿using FreshMvvm;
 using QueimaApp.Interfaces;
-using QueimaApp.PageModels;
 using QueimaApp.Pages;
 using QueimaApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
 namespace QueimaApp
 {
-    public class App : Application
+    public partial class App : Application
     {
+
         public App()
         {
             FreshIOC.Container.Register<IDatabaseService, DatabaseService>();

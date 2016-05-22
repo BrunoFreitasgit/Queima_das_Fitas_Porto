@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace QueimaApp.PageModels
 {
@@ -19,12 +20,10 @@ namespace QueimaApp.PageModels
         public AtividadeAcademicaPageModel(IDatabaseService dataService)
         {
             _dataService = dataService;
-
-            this.WhenAny(HandleContactChanged, o => o.AtividadeAcademica);
         }
-        void HandleContactChanged(string propertyName)
+        public AtividadeAcademicaPageModel()
         {
-            //handle the property changed, nice
+                
         }
 
         public override void Init(object initData)
@@ -36,6 +35,18 @@ namespace QueimaApp.PageModels
             else
             {
                 AtividadeAcademica = new AtividadeAcademica();
+            }
+        }
+        public Command LocationCommand
+        {
+            get
+            {
+                return new Command(async() => {
+                    // TODO
+                    // PUSH MAPVIEW WITH COORDINATES
+                    await CoreMethods.PushPageModel<ModalPageModel>(null, true);
+                }
+                );
             }
         }
     }

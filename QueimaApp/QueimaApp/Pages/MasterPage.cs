@@ -12,6 +12,8 @@ namespace QueimaApp.Pages
     public class MasterPage : FreshMasterDetailNavigationContainer
     {
         List<MasterPageItem> pageIcons = new List<MasterPageItem>();
+        private ListView listview;
+
         public MasterPage()
         {
             this.Init("Menu", "Menu.png");
@@ -28,7 +30,7 @@ namespace QueimaApp.Pages
 
         protected override void CreateMenuPage(string menuPageTitle, string menuIcon = null)
         {
-            var listview = new ListView();
+            listview = new ListView();
             var _menuPage = new ContentPage();
             _menuPage.Title = menuPageTitle;
             _menuPage.BackgroundColor = Color.FromHex("#c8c8c8");
@@ -42,14 +44,7 @@ namespace QueimaApp.Pages
 
 
             listview.ItemTemplate = cell;
-            listview.ItemSelected += (sender, args) =>
-            {
-                if (Pages.ContainsKey(((MasterPageItem)args.SelectedItem).Title))
-                {
-                    Detail = Pages[((MasterPageItem)args.SelectedItem).Title];
-                }
-                IsPresented = false;
-            };
+            listview.ItemSelected += onItemSelected;
 
             _menuPage.Content = listview;
 
@@ -60,6 +55,21 @@ namespace QueimaApp.Pages
 
             Master = navPage;
         }
+
+        private void onItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            if(args.SelectedItem == null)
+            {
+                return;
+            }
+            if (Pages.ContainsKey(((MasterPageItem)args.SelectedItem).Title))
+            {
+                Detail = Pages[((MasterPageItem)args.SelectedItem).Title];
+            }
+            IsPresented = false;
+            listview.SelectedItem = null;
+        }
+
         protected override Page CreateContainerPage(Page page)
         {
             var navigation = new NavigationPage(page);
@@ -77,7 +87,6 @@ namespace QueimaApp.Pages
                 IconSource = icon
             });
         }
-
 
     }
 }

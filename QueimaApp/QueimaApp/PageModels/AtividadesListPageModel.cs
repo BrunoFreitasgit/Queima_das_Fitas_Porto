@@ -14,6 +14,8 @@ namespace QueimaApp.PageModels
     public class AtividadesListPageModel : FreshBasePageModel
     {
         IDatabaseService _databaseService;
+        AtividadeAcademica _selectedAtividade;
+
         public AtividadesListPageModel(IDatabaseService databaseService)
         {
             _databaseService = databaseService;
@@ -40,9 +42,7 @@ namespace QueimaApp.PageModels
             }
         }
 
-        AtividadeAcademica _selectedAtividade;
-
-        public AtividadeAcademica SelectedContact
+        public AtividadeAcademica SelectedAtividade
         {
             get
             {
@@ -52,17 +52,17 @@ namespace QueimaApp.PageModels
             {
                 _selectedAtividade = value;
                 if (value != null)
-                    ContactSelected.Execute(value);
+                    AtividadeSelected.Execute(value);
             }
         }
 
-        public Command<AtividadeAcademica> ContactSelected
+        public Command<AtividadeAcademica> AtividadeSelected
         {
             get
             {
-                return new Command<AtividadeAcademica>(async (contact) =>
+                return new Command<AtividadeAcademica>(async (atividade) =>
                 {
-                    await CoreMethods.PushPageModel<ContactPageModel>(contact);
+                    await CoreMethods.PushPageModel<AtividadeAcademicaPageModel>(atividade);
                 });
             }
         }

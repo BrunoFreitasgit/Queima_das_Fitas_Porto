@@ -17,6 +17,25 @@ namespace QueimaApp.PageModels
     {
         IDatabaseService _databaseService;
 
+        Contact _selectedContact;
+
+        public Contact SelectedContact
+        {
+            get
+            {
+                return _selectedContact;
+            }
+            set
+            {
+                _selectedContact = value;
+                if (value != null)
+                {
+                    ContactSelected.Execute(value);
+                    _selectedContact = null;
+                }
+            }
+        }
+
         public ContactListPageModel(IDatabaseService databaseService)
         {
             _databaseService = databaseService;
@@ -43,27 +62,13 @@ namespace QueimaApp.PageModels
             }
         }
 
-        Contact _selectedContact;
-
-        public Contact SelectedContact
-        {
-            get
-            {
-                return _selectedContact;
-            }
-            set
-            {
-                _selectedContact = value;
-                if (value != null)
-                    ContactSelected.Execute(value);
-            }
-        }
 
         public Command AddContact
         {
             get
             {
-                return new Command(async () => {
+                return new Command(async () =>
+                {
                     await CoreMethods.PushPageModel<ContactPageModel>();
                 });
             }
@@ -73,8 +78,10 @@ namespace QueimaApp.PageModels
         {
             get
             {
-                return new Command<Contact>(async (contact) => {
+                return new Command<Contact>(async (contact) =>
+                {
                     await CoreMethods.PushPageModel<ContactPageModel>(contact);
+                    _selectedContact = null;
                 });
             }
         }
