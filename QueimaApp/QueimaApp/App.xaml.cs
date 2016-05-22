@@ -1,5 +1,6 @@
 ﻿using FreshMvvm;
 using QueimaApp.Interfaces;
+using QueimaApp.Navigation;
 using QueimaApp.Pages;
 using QueimaApp.Services;
 using System;
@@ -18,6 +19,7 @@ namespace QueimaApp
         public App()
         {
             FreshIOC.Container.Register<IDatabaseService, DatabaseService>();
+            //MainPage = new CustomImplementedNav();
             MainPage = new MasterPage();
         }
 

@@ -41,10 +41,10 @@ namespace QueimaApp.PageModels
         {
             get
             {
-                return new Command(async() => {
+                return new Command(async () => {
                     // TODO
                     // PUSH MAPVIEW WITH COORDINATES
-                    await CoreMethods.PushPageModel<ModalPageModel>(null, true);
+                    await CoreMethods.PushPageModel<AtividadeMapaPageModel>(AtividadeAcademica, true);
                 }
                 );
             }

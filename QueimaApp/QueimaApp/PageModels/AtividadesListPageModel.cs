@@ -1,4 +1,5 @@
 ﻿using FreshMvvm;
+using PropertyChanged;
 using QueimaApp.Interfaces;
 using QueimaApp.Models;
 using System;
@@ -11,6 +12,7 @@ using Xamarin.Forms;
 
 namespace QueimaApp.PageModels
 {
+    [ImplementPropertyChanged]
     public class AtividadesListPageModel : FreshBasePageModel
     {
         IDatabaseService _databaseService;

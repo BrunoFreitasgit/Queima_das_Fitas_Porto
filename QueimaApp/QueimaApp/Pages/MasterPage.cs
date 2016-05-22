@@ -22,11 +22,11 @@ namespace QueimaApp.Pages
 
         private void AddPages()
         {
-            this.AddPageWithIcon<ContactListPageModel>("Contacts","icon.png", null);
-            this.AddPageWithIcon<QuoteListPageModel>("Quotes","icon.png", null);
-            this.AddPageWithIcon<AtividadesListPageModel>("Atividades Académicas", "icon.png", null);
+            AddPageWithIcon<ContactListPageModel>("Contacts", "icon.png", null);
+            AddPageWithIcon<QuoteListPageModel>("Quotes", "icon.png", null);
+            AddPageWithIcon<AtividadesListPageModel>("Atividades Académicas", "icon.png", null);
+            //AddPageWithIcon<BilheteiraPageModel>("Bilheteira", "icon.png", null);
         }
-
 
         protected override void CreateMenuPage(string menuPageTitle, string menuIcon = null)
         {
@@ -58,7 +58,7 @@ namespace QueimaApp.Pages
 
         private void onItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            if(args.SelectedItem == null)
+            if (args.SelectedItem == null)
             {
                 return;
             }
