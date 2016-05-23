@@ -1,6 +1,7 @@
 ﻿using FreshMvvm;
 using QueimaApp.Interfaces;
 using QueimaApp.Navigation;
+using QueimaApp.PageModels;
 using QueimaApp.Pages;
 using QueimaApp.Services;
 using System;

@@ -14,7 +14,6 @@ namespace QueimaApp.Pages
 
         public AtividadeAcademicaPage()
         {
-            BindingContext = new AtividadeAcademicaPageModel();
             AbsoluteLayout peakLayout = new AbsoluteLayout
             {
                 HeightRequest = 250,

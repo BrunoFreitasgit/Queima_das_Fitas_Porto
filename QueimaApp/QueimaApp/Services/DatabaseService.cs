@@ -23,7 +23,7 @@ namespace QueimaApp.Services
             _pontosVenda = InitPontosVenda();
         }
 
-    
+
 
         public void UpdateContact(Contact contact)
         {
@@ -91,8 +91,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude =  32,
-                   Longitude = 432,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -103,8 +103,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude = 32 ,
-                   Longitude = 321,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = ""
@@ -115,8 +115,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude =  21,
-                   Longitude =32 ,
+                    Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -127,8 +127,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude =  311,
-                   Longitude = 31,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -139,8 +139,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude =  332,
-                   Longitude = 332,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -151,8 +151,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude =  32,
-                   Longitude = 12,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -163,8 +163,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude =  44,
-                   Longitude = 13,
+                  Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -175,8 +175,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude = 31 ,
-                   Longitude = 31,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -187,8 +187,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude = 56 ,
-                   Longitude = 54,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data = "4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -199,8 +199,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude =  32,
-                   Longitude = 32,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
@@ -211,8 +211,8 @@ namespace QueimaApp.Services
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala.jpg" ,
-                   Latitude = 43 ,
-                   Longitude = 423,
+                   Latitude =  41.146974,
+                   Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
                    PontoVenda = "Coliseu do Porto, FAP e Campus S. João"

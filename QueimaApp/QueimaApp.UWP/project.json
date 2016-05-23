@@ -1,9 +1,12 @@
 ﻿{
   "dependencies": {
     "FreshMvvm": "2.1.0",
+    "Microsoft.Bcl": "1.1.10",
+    "Microsoft.Bcl.Build": "1.0.21",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "PropertyChanged.Fody": "1.51.0",
-    "Xamarin.Forms": "2.3.0.34-pre1",
+    "TK.CustomMap": "1.5.0",
+    "Xamarin.Forms": "2.3.0.38-pre2",
     "Xamarin.Forms.Maps": "2.3.0.38-pre2",
     "Xamarin.Forms.Theme.Base": "1.0.0.43-pre1"
   },
