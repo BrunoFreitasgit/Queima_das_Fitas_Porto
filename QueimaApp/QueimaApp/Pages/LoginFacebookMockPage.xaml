@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.LoginFacebookMockPage">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Fechar" Command="{Binding CloseCommand}"/>
+    <ToolbarItem Text="Agora não" Command="{Binding CloseCommand}"/>
   </ContentPage.ToolbarItems>
   <Label Text="Esta será a página de Login do Facebook" VerticalOptions="Center" HorizontalOptions="Center" />
 </ContentPage>

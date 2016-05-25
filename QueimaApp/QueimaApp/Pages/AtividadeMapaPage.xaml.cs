@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using TK.CustomMap;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using Xamarin.Forms.Xaml;
 
 namespace QueimaApp.Pages
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AtividadeMapaPage : ContentPage
     {
         public AtividadeMapaPage()
@@ -19,6 +21,7 @@ namespace QueimaApp.Pages
 
         private void createView()
         {
+            //var mapView = new TKCustomMap(new MapSpan(new Position(41.152506, -8.636040), 41.152506, -8.636040).WithZoom(5));
             var mapView = new TKCustomMap();
             mapView.SetBinding(TKCustomMap.MapCenterProperty, "MapCenter");
             mapView.SetBinding(TKCustomMap.MapRegionProperty, "MapRegion");

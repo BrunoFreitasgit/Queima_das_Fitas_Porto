@@ -1,10 +1,14 @@
-﻿using QueimaApp.Interfaces;
+﻿using Newtonsoft.Json;
+using QueimaApp.Interfaces;
 using QueimaApp.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace QueimaApp.Services
 {
@@ -14,6 +18,7 @@ namespace QueimaApp.Services
         private List<Quote> _quotes;
         private List<AtividadeAcademica> _atividades;
         private List<PontoVenda> _pontosVenda;
+        private List<Barraca> _barracas;
 
         public DatabaseService()
         {
@@ -21,6 +26,7 @@ namespace QueimaApp.Services
             _quotes = InitQuotes();
             _atividades = InitAtividades();
             _pontosVenda = InitPontosVenda();
+            _barracas = InitBarracas();
         }
 
 
@@ -113,13 +119,13 @@ namespace QueimaApp.Services
                    Id = 3 ,
                    Nome = "Cortejo Académico" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
-                   Preço = "3,00€" ,
+                   Preço = "" ,
                    ImagePath = "BaileGala.jpg" ,
                     Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
                    Local ="Coliseu do Porto",
-                   PontoVenda = "Coliseu do Porto, FAP e Campus S. João"
+                   PontoVenda = ""
                },
                new AtividadeAcademica {
                    Id = 4 ,
@@ -270,5 +276,26 @@ namespace QueimaApp.Services
         {
             return _pontosVenda;
         }
+        public List<Barraca> InitBarracas()
+        {
+            var assembly = typeof(DatabaseService).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream("QueimaApp.Json_test.barracas.json");
+
+            List<Barraca> myData;
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                //var myDa2ta = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Barraca>>(reader);
+                JsonSerializer serializer = new JsonSerializer();
+                myData = (List<Barraca>)serializer.Deserialize(reader, typeof(List<Barraca>));
+            }
+            return myData;
+        }
+        public List<Barraca> GetBarracas()
+        {
+            return _barracas;
+        }
+
+
+
     }
 }

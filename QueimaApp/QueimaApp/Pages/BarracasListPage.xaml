@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="QueimaApp.Pages.AtividadesListPage"
-             xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
-             Title ="{Binding Titulo}">
+             x:Class="QueimaApp.Pages.BarracasListPage"
+              xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp">
   <ContentPage.ToolbarItems>
   </ContentPage.ToolbarItems>
   <local:BasePage.Content>
-    <ListView ItemsSource="{Binding Atividades}" SelectedItem="{Binding SelectedAtividade}" x:Name ="listView" >
+    <ListView ItemsSource="{Binding Barracas}" x:Name ="listView" >
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ImageCell Text="{Binding Nome}" Detail="{Binding Data}" ImageSource="{Binding ImagePath}"/>
+          <TextCell Text="{Binding Nome}" Detail="{Binding Latitude}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

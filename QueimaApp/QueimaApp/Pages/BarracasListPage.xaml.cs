@@ -1,5 +1,4 @@
-﻿using QueimaApp.PageModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace QueimaApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContactListPage : BasePage
+    public partial class BarracasListPage : BasePage
     {
-
-        public ContactListPage()
+        public BarracasListPage()
         {
             InitializeComponent();
-        }
-        protected override void OnAppearing()
-        {
-            listView.SelectedItem = null;
-            base.OnAppearing();
         }
     }
 }

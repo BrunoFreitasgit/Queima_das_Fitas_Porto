@@ -16,7 +16,6 @@ namespace QueimaApp.Pages
     {
         public AtividadesListPage()
         {
-            this.Title = "Atividades Académicas";
             InitializeComponent();
         }
         protected override void OnAppearing()

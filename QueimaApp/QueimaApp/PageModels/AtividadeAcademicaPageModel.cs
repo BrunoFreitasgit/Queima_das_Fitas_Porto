@@ -11,21 +11,26 @@ namespace QueimaApp.PageModels
     {
         IDatabaseService _dataService;
         public AtividadeAcademica AtividadeAcademica { get; set; }
-
+        public bool IsPrecoVisible { get; set; }
+        public bool IsPontoVendaVisible { get; set; }
+        public string Titulo { get; set; }
         public AtividadeAcademicaPageModel(IDatabaseService dataService)
         {
             _dataService = dataService;
         }
-        public AtividadeAcademicaPageModel()
-        {
-                
-        }
+        public AtividadeAcademicaPageModel(){}
 
         public override void Init(object initData)
         {
             if (initData != null)
             {
                 AtividadeAcademica = (AtividadeAcademica)initData;
+                Titulo = AtividadeAcademica.Nome;
+                if (!string.IsNullOrEmpty(AtividadeAcademica.Preço))
+                {
+                    IsPrecoVisible = true;
+                    IsPontoVendaVisible = true;
+                }
             }
             else
             {

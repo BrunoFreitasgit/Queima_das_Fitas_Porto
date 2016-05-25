@@ -22,6 +22,7 @@ namespace QueimaApp
             FreshIOC.Container.Register<IDatabaseService, DatabaseService>();
             //MainPage = new CustomImplementedNav();
             MainPage = new MasterPage();
+
         }
 
         protected override void OnStart()

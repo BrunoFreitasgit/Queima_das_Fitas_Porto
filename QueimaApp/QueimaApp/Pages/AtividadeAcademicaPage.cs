@@ -1,4 +1,5 @@
-﻿using QueimaApp.PageModels;
+﻿using QueimaApp.Converters;
+using QueimaApp.PageModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace QueimaApp.Pages
 
         public AtividadeAcademicaPage()
         {
+            this.SetBinding(Page.TitleProperty, "Titulo");
             AbsoluteLayout peakLayout = new AbsoluteLayout
             {
                 HeightRequest = 250,
@@ -45,8 +47,8 @@ namespace QueimaApp.Pages
                 TextColor = Color.FromHex("#ddd"),
                 HorizontalOptions = LayoutOptions.StartAndExpand,
             };
+            //data.SetBinding(Label.TextProperty, new Binding("AtividadeAcademica.Data",stringFormat:"Data: {0}"));
             data.SetBinding(Label.TextProperty, "AtividadeAcademica.Data");
-
             var datalabel = new Label
             {
                 Text = "Data: ",
@@ -77,7 +79,10 @@ namespace QueimaApp.Pages
                 TextColor = Color.FromHex("#ddd"),
                 HorizontalOptions = LayoutOptions.Start,
             };
+
+            preçoLabel.SetBinding(Label.IsVisibleProperty, "IsPrecoVisible");
             preço.SetBinding(Label.TextProperty, "AtividadeAcademica.Preço");
+            preço.SetBinding(Label.IsVisibleProperty, "IsPrecoVisible");
 
 
             infoPreco.Children.Add(preçoLabel);
@@ -103,8 +108,9 @@ namespace QueimaApp.Pages
                 TextColor = Color.FromHex("#ddd"),
                 HorizontalOptions = LayoutOptions.Start,
             };
+            pontoVendaLabel.SetBinding(Label.IsVisibleProperty, "IsPontoVendaVisible");
             pontoVenda.SetBinding(Label.TextProperty, "AtividadeAcademica.PontoVenda");
-
+            pontoVenda.SetBinding(Label.IsVisibleProperty, "IsPontoVendaVisible");
 
             infoPontoVenda.Children.Add(pontoVendaLabel);
             infoPontoVenda.Children.Add(pontoVenda);
@@ -186,10 +192,10 @@ namespace QueimaApp.Pages
                 BackgroundColor = Color.FromHex("#333"),
                 Children = {
                     peakLayout,
-                    description,
                     infoData,
                     infoPreco,
-                    infoPontoVenda
+                    infoPontoVenda,
+                    description
                 }
             };
         }

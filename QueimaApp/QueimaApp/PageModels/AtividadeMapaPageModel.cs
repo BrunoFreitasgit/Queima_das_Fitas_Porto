@@ -40,8 +40,7 @@ namespace QueimaApp.PageModels
             };
             Pins.Add(Pin);
             MapCenter = new Position(Atividade.Latitude, Atividade.Longitude);
-            MapRegion =  MapSpan.FromCenterAndRadius(Pin.Position, Distance.FromKilometers(2)); 
-
+            MapRegion = MapSpan.FromCenterAndRadius(Pin.Position, Distance.FromKilometers(0.5));
         }
         protected override void ViewIsAppearing(object sender, System.EventArgs e)
         {

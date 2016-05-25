@@ -38,16 +38,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\StringToVisibilityConverter.cs" />
     <Compile Include="Extensions\EmbeddedImageResourceExtension.cs" />
     <Compile Include="Interfaces\IDatabaseService.cs" />
     <Compile Include="LaunchPage.cs" />
     <Compile Include="Models\AtividadeAcademica.cs" />
+    <Compile Include="Models\Barraca.cs" />
     <Compile Include="Models\Bilhete.cs" />
     <Compile Include="Models\Bilheteira.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\PontoVenda.cs" />
     <Compile Include="Navigation\CustomImplementedNav.cs" />
     <Compile Include="PageModels\AtividadeMapaPageModel.cs" />
+    <Compile Include="PageModels\BarracasListPageModel.cs" />
     <Compile Include="PageModels\BilheteiraPageModel.cs" />
     <Compile Include="PageModels\BilhetesPageModel.cs" />
     <Compile Include="PageModels\LoginFacebookMockPageModel.cs" />
@@ -56,6 +59,9 @@
     <Compile Include="Pages\AtividadeAcademicaPage.cs" />
     <Compile Include="Pages\AtividadeMapaPage.xaml.cs">
       <DependentUpon>AtividadeMapaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BarracasListPage.xaml.cs">
+      <DependentUpon>BarracasListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\BilheteiraPage.xaml.cs">
       <DependentUpon>BilheteiraPage.xaml</DependentUpon>
@@ -104,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
+    <EmbeddedResource Include="Json_test\barracas.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +257,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\LoginFacebookMockPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\BarracasListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
