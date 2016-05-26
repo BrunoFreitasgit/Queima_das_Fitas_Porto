@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace QueimaApp.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginFacebookMockPage : ContentPage
+    public partial class PontoVendaPage : ContentPage
     {
-        public LoginFacebookMockPage()
+        public PontoVendaPage()
         {
             InitializeComponent();
         }

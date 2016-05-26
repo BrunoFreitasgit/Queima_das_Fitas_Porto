@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
              x:Class="QueimaApp.Pages.BilheteiraPage">
-  <local:QuoteListPage />
-  <local:ContactListPage />
-  <local:AtividadesListPage />
+  <TabbedPage.Children>
+    
+  </TabbedPage.Children>
 </TabbedPage>
