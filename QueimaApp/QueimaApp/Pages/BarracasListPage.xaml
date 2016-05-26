@@ -7,12 +7,15 @@
   <ContentPage.ToolbarItems>
   </ContentPage.ToolbarItems>
   <local:BasePage.Content>
-    <ListView ItemsSource="{Binding Barracas}" SelectedItem="{Binding SelectedBarraca}" x:Name ="listView" >
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <TextCell Text="{Binding Nome}"/>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout>
+      <SearchBar Placeholder="Introduza o nome da barraca"/>
+      <ListView ItemsSource="{Binding Barracas}" SelectedItem="{Binding SelectedBarraca}" x:Name ="listView" >
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <TextCell Text="{Binding Nome}"/>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
   </local:BasePage.Content>
 </local:BasePage>

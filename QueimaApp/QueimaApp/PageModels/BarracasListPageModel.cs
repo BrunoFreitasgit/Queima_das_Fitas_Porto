@@ -37,6 +37,8 @@ namespace QueimaApp.PageModels
         {
             base.ViewIsDisappearing(sender, e);
         }
+
+
         public Barraca SelectedBarraca
         {
             get
@@ -48,12 +50,13 @@ namespace QueimaApp.PageModels
                 _selectedBarraca = value;
                 if (value != null)
                 {
-                    PontoVendaSelected.Execute(value);
+                    BarracaSelected.Execute(value);
                 }
 
             }
         }
-        public Command<Barraca> PontoVendaSelected
+
+        public Command<Barraca> BarracaSelected
         {
             get
             {

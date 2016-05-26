@@ -24,8 +24,6 @@ namespace QueimaApp.Pages
 
         private void AddPages()
         {
-            AddPageWithIcon<ContactListPageModel>("Contacts", "icon.png", null);
-            AddPageWithIcon<QuoteListPageModel>("Quotes", "icon.png", null);
             AddPageWithIcon<AtividadesListPageModel>("Atividades Académicas", "icon.png", null);
             AddPageWithIcon<BarracasListPageModel>("Barracas", "icon.png", null);
             AddPageWithIcon<BilheteiraPageModel>("Bilheteira", "icon.png", null);

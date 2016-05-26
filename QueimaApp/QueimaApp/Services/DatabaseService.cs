@@ -14,81 +14,19 @@ namespace QueimaApp.Services
 {
     public class DatabaseService : IDatabaseService
     {
-        private List<Contact> _contacts;
-        private List<Quote> _quotes;
+
         private List<AtividadeAcademica> _atividades;
         private List<PontoVenda> _pontosVenda;
         private List<Barraca> _barracas;
         private List<Bilhete> _bilhetes;
         public DatabaseService()
         {
-            _contacts = InitContacts();
-            _quotes = InitQuotes();
             _atividades = InitAtividades();
             _pontosVenda = InitPontosVenda();
             _barracas = InitBarracas();
             _bilhetes = InitBilhetes();
         }
 
-
-
-        public void UpdateContact(Contact contact)
-        {
-            if (contact.Id == 0)
-            {
-                contact.Id = _contacts.Count + 1;
-                _contacts.Add(contact);
-            }
-            else
-            {
-                var oldContact = _contacts.Find(c => c.Id == contact.Id);
-                oldContact.Name = contact.Name;
-                oldContact.Phone = contact.Phone;
-            }
-        }
-
-        public void UpdateQuote(Quote quote)
-        {
-            if (quote.Id == 0)
-            {
-                quote.Id = _quotes.Count + 1;
-                _quotes.Add(quote);
-            }
-            else
-            {
-                var oldQuote = _quotes.Find(c => c.Id == quote.Id);
-                oldQuote.CustomerName = quote.CustomerName;
-                oldQuote.Total = quote.Total;
-            }
-        }
-
-        public List<Contact> GetContacts()
-        {
-            return _contacts;
-        }
-
-        public List<Quote> GetQuotes()
-        {
-            return _quotes;
-        }
-
-        private List<Contact> InitContacts()
-        {
-            return new List<Contact> {
-                new Contact { Id = 1, Name = "Xam Consulting", Phone = "0404 865 350" },
-                new Contact { Id = 2, Name = "Michael Ridland", Phone = "0404 865 350" },
-                new Contact { Id = 3, Name = "Thunder Apps", Phone = "0404 865 350" },
-            };
-        }
-
-        private List<Quote> InitQuotes()
-        {
-            return new List<Quote> {
-                new Quote { Id = 1, CustomerName = "Xam Consulting", Total = "$350.00" },
-                new Quote { Id = 2, CustomerName = "Michael Ridland", Total = "$3503.00" },
-                new Quote { Id = 3, CustomerName = "Thunder Apps", Total = "$3504.00" },
-            };
-        }
         private List<AtividadeAcademica> InitAtividades()
         {
             return new List<AtividadeAcademica>
@@ -97,7 +35,7 @@ namespace QueimaApp.Services
                    Id = 1 , Nome = "Baile de Gala" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "BaileGala_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -109,7 +47,7 @@ namespace QueimaApp.Services
                    Nome = "Chá Dançante" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "ChaDancante_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -121,7 +59,7 @@ namespace QueimaApp.Services
                    Nome = "Cortejo Académico" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "Cortejo_tb.jpg" ,
                     Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -133,7 +71,7 @@ namespace QueimaApp.Services
                    Nome = "Dia da Beneficiência" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "DiaBeneficiencia_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -145,7 +83,7 @@ namespace QueimaApp.Services
                    Nome = "Monumental Serenata" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "MonumentalSerenata_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -157,7 +95,7 @@ namespace QueimaApp.Services
                    Nome = "Missa da Benção das Pastas" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "MissaBencao_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -169,7 +107,7 @@ namespace QueimaApp.Services
                    Nome = "ECAP" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "ECAP_tb.jpg" ,
                   Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -181,7 +119,7 @@ namespace QueimaApp.Services
                    Nome = "Concerto Promenade" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "Promenade_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -193,7 +131,7 @@ namespace QueimaApp.Services
                    Nome = "XXX FITA" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "FITA_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data = "4 de maio às 20:01",
@@ -205,7 +143,7 @@ namespace QueimaApp.Services
                    Nome = "Sarau Cultural" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "Sarau_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",
@@ -217,7 +155,7 @@ namespace QueimaApp.Services
                    Nome = "RallyPaper" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
-                   ImagePath = "BaileGala.jpg" ,
+                   ImagePath = "RallyPaper_tb.jpg" ,
                    Latitude =  41.146974,
                    Longitude = -8.604990,
                    Data ="4 de maio às 20:01",

@@ -9,14 +9,6 @@ namespace QueimaApp.Interfaces
 {
     public interface IDatabaseService
     {
-        List<Contact> GetContacts();
-
-        void UpdateContact(Contact contact);
-
-        List<Quote> GetQuotes();
-
-        void UpdateQuote(Quote quote);
-
         List<AtividadeAcademica> GetAtividades();
         List<PontoVenda> GetPontosVenda();
         List<Barraca> GetBarracas();
