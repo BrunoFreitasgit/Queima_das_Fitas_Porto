@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace QueimaApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BarracasListPage : BasePage
+    public partial class BilhetesPage : ContentPage
     {
-        public BarracasListPage()
+        public BilhetesPage()
         {
             InitializeComponent();
-        }
-        protected override void OnAppearing()
-        {
-            listView.SelectedItem = null;
-            base.OnAppearing();
         }
     }
 }

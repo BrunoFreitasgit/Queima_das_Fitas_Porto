@@ -50,6 +50,7 @@
     <Compile Include="Models\PontoVenda.cs" />
     <Compile Include="Navigation\CustomImplementedNav.cs" />
     <Compile Include="PageModels\AtividadeMapaPageModel.cs" />
+    <Compile Include="PageModels\BarracaPageModel.cs" />
     <Compile Include="PageModels\BarracasListPageModel.cs" />
     <Compile Include="PageModels\BilheteiraPageModel.cs" />
     <Compile Include="PageModels\BilhetesPageModel.cs" />
@@ -60,11 +61,17 @@
     <Compile Include="Pages\AtividadeMapaPage.xaml.cs">
       <DependentUpon>AtividadeMapaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BarracaPage.xaml.cs">
+      <DependentUpon>BarracaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\BarracasListPage.xaml.cs">
       <DependentUpon>BarracasListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\BilheteiraPage.xaml.cs">
       <DependentUpon>BilheteiraPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BilhetesPage.xaml.cs">
+      <DependentUpon>BilhetesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LoginFacebookMockPage.xaml.cs">
       <DependentUpon>LoginFacebookMockPage.xaml</DependentUpon>
@@ -272,6 +279,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\PontoVendaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\BilhetesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\BarracaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

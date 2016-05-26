@@ -17,7 +17,6 @@ namespace QueimaApp.PageModels
     {
         IDatabaseService _databaseService;
         AtividadeAcademica _selectedAtividade;
-        public static string Titulo { get; set; }
 
         public AtividadesListPageModel(IDatabaseService databaseService)
         {
@@ -29,7 +28,6 @@ namespace QueimaApp.PageModels
         public override void Init(object initData)
         {
             Atividades = new ObservableCollection<AtividadeAcademica>(_databaseService.GetAtividades());
-            Titulo = "Atividades Académicas";
         }
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
@@ -67,6 +65,7 @@ namespace QueimaApp.PageModels
                 return new Command<AtividadeAcademica>(async (atividade) =>
                 {
                     await CoreMethods.PushPageModel<AtividadeAcademicaPageModel>(atividade);
+                    _selectedAtividade = null;
                 });
             }
         }

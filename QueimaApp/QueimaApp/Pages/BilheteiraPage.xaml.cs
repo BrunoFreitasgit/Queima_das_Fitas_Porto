@@ -16,14 +16,14 @@ namespace QueimaApp.Pages
     {
         public BilheteiraPage()
         {
-            var contactPage = FreshPageModelResolver.ResolvePageModel<PontoVendaListPageModel>();
-            var quotePage = FreshPageModelResolver.ResolvePageModel<QuoteListPageModel>();
-            contactPage.Title = "Pontos de Venda";
-            quotePage.Title = "Quote";
-            contactPage.Icon = "icon.png";
-            quotePage.Icon = "icon.png";
-            this.Children.Add(contactPage);
-            this.Children.Add(quotePage);
+            var pontosVendaPage = FreshPageModelResolver.ResolvePageModel<PontoVendaListPageModel>();
+            var bilhetesPage = FreshPageModelResolver.ResolvePageModel<BilhetesPageModel>();
+            pontosVendaPage.Title = "Pontos de Venda";
+            bilhetesPage.Title = "Bilhetes";
+            pontosVendaPage.Icon = "icon.png";
+            bilhetesPage.Icon = "icon.png";
+            this.Children.Add(pontosVendaPage);
+            this.Children.Add(bilhetesPage);
             InitializeComponent();
         }
     }

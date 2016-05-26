@@ -19,7 +19,7 @@ namespace QueimaApp.Services
         private List<AtividadeAcademica> _atividades;
         private List<PontoVenda> _pontosVenda;
         private List<Barraca> _barracas;
-
+        private List<Bilhete> _bilhetes;
         public DatabaseService()
         {
             _contacts = InitContacts();
@@ -27,6 +27,7 @@ namespace QueimaApp.Services
             _atividades = InitAtividades();
             _pontosVenda = InitPontosVenda();
             _barracas = InitBarracas();
+            _bilhetes = InitBilhetes();
         }
 
 
@@ -294,8 +295,14 @@ namespace QueimaApp.Services
         {
             return _barracas;
         }
-
-
-
+        public List<Bilhete> InitBilhetes()
+        {
+            //TODO
+            return new List<Bilhete>();
+        }
+        public List<Bilhete> GetBilhetes()
+        {
+            return _bilhetes;
+        }
     }
 }

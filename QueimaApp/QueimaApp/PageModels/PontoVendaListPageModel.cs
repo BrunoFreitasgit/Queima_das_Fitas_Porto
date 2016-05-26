@@ -19,19 +19,13 @@ namespace QueimaApp.PageModels
     public class PontoVendaListPageModel : FreshBasePageModel
     {
         IDatabaseService _databaseService;
-        private readonly List<string> _allItems = new List<string>();
-        private readonly ObservableCollection<string> _pontosVenda;
-        public ObservableCollection<string> Items => _pontosVenda;
         public ObservableCollection<PontoVenda> PontosVenda { get; set; }
-        public string SearchText { get; set; }
         PontoVenda _selectedPontoVenda;
-        public ICommand SearchCommand { get; private set; }
 
 
         public PontoVendaListPageModel(IDatabaseService databaseService)
         {
             _databaseService = databaseService;
-            this.SearchCommand = new Command(this.ExecuteSearchCommand, this.CanExecuteSearchCommand);
         }
         public override void Init(object initData)
         {
@@ -58,7 +52,10 @@ namespace QueimaApp.PageModels
             {
                 _selectedPontoVenda = value;
                 if (value != null)
+                {
                     PontoVendaSelected.Execute(value);
+                }
+
             }
         }
         public Command<PontoVenda> PontoVendaSelected
@@ -68,33 +65,9 @@ namespace QueimaApp.PageModels
                 return new Command<PontoVenda>(async (ponto) =>
                 {
                     await CoreMethods.PushPageModel<PontoVendaPageModel>(ponto);
+                    _selectedPontoVenda = null;
                 });
             }
         }
-
-        protected virtual bool CanExecuteSearchCommand()
-        {
-            return true;
-        }
-
-        protected virtual void ExecuteSearchCommand()
-        {
-            this.Items.Clear();
-            IEnumerable<string> foundItems;
-            if (string.IsNullOrEmpty(this.SearchText))
-            {
-                foundItems = _allItems;
-            }
-            else
-            {
-                foundItems = _allItems.Where(p => p.ToLower().Contains(this.SearchText.ToLower()));
-            }
-            foreach (var foundItem in foundItems)
-            {
-                this.Items.Add(foundItem);
-            }
-        }
-
-
     }
 }

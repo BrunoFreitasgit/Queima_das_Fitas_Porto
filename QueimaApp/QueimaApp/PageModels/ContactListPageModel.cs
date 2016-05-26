@@ -31,7 +31,6 @@ namespace QueimaApp.PageModels
                 if (value != null)
                 {
                     ContactSelected.Execute(value);
-                    _selectedContact = null;
                 }
             }
         }
@@ -52,6 +51,7 @@ namespace QueimaApp.PageModels
         {
             base.ViewIsAppearing(sender, e);
         }
+        
 
         public override void ReverseInit(object value)
         {

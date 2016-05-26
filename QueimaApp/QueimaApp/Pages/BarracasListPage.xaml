@@ -2,14 +2,15 @@
 <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.BarracasListPage"
-              xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp">
+             xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
+             Title="Barracas">
   <ContentPage.ToolbarItems>
   </ContentPage.ToolbarItems>
   <local:BasePage.Content>
-    <ListView ItemsSource="{Binding Barracas}" x:Name ="listView" >
+    <ListView ItemsSource="{Binding Barracas}" SelectedItem="{Binding SelectedBarraca}" x:Name ="listView" >
       <ListView.ItemTemplate>
         <DataTemplate>
-          <TextCell Text="{Binding Nome}" Detail="{Binding Latitude}"/>
+          <TextCell Text="{Binding Nome}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

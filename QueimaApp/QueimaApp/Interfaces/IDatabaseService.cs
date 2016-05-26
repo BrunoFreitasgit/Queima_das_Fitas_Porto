@@ -20,5 +20,6 @@ namespace QueimaApp.Interfaces
         List<AtividadeAcademica> GetAtividades();
         List<PontoVenda> GetPontosVenda();
         List<Barraca> GetBarracas();
+        List<Bilhete> GetBilhetes();
     }
 }

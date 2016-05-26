@@ -18,13 +18,7 @@ namespace QueimaApp.PageModels
 
         public override void Init(object initData)
         {
-           // Atividades = new ObservableCollection<AtividadeAcademica>(_databaseService.GetAtividades());
-        }
 
-        protected override void ViewIsAppearing(object sender, EventArgs e)
-        {
-            base.ViewIsAppearing(sender, e);
         }
-
     }
 }

@@ -3,11 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.PontoVendaListPage">
   <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
-    <SearchBar
-      Placeholder="Introduza o nome da barraca"
-      Text="{Binding SearchText, Mode =TwoWay}"
-			SearchCommand ="{Binding SearchCommand}"/>
-
+    
     <ListView ItemsSource="{Binding PontosVenda}" SelectedItem="{Binding SelectedPontoVenda}" x:Name="listView">
       <ListView.ItemTemplate>
         <DataTemplate>
