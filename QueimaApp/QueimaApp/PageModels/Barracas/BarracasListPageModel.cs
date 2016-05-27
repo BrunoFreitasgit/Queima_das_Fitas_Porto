@@ -18,7 +18,7 @@ namespace QueimaApp.PageModels
         IDatabaseService _databaseService;
         public ObservableCollection<Barraca> Barracas { get; set; }
         Barraca _selectedBarraca;
-
+        public string SearchText { get; set; }
         public BarracasListPageModel(IDatabaseService databaseService)
         {
             _databaseService = databaseService;
@@ -37,7 +37,6 @@ namespace QueimaApp.PageModels
         {
             base.ViewIsDisappearing(sender, e);
         }
-
 
         public Barraca SelectedBarraca
         {
@@ -65,6 +64,29 @@ namespace QueimaApp.PageModels
                     await CoreMethods.PushPageModel<BarracaPageModel>(barraca);
                     _selectedBarraca = null;
                 });
+            }
+        }
+        public Command<string> SearchCommand
+        {
+            get
+            {
+                return new Xamarin.Forms.Command<string>(DoSearchCommand, CanExecuteSearchCommand);
+            }
+        }
+
+        private bool CanExecuteSearchCommand(object arg)
+        {
+            return true;
+        }
+
+        private void DoSearchCommand(object obj)
+        {
+            List<Barraca> entities = (from e in Barracas
+                                      where e.Nome.Contains(SearchText)
+                                      select e).ToList<Barraca>();
+            if (entities != null && entities.Any())
+            {
+                Barracas = new ObservableCollection<Barraca>(entities);
             }
         }
     }

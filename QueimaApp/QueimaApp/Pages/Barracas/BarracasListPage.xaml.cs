@@ -1,4 +1,7 @@
-﻿using System;
+﻿using QueimaApp.Behaviors;
+using QueimaApp.Converters;
+using QueimaApp.PageModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +17,14 @@ namespace QueimaApp.Pages
     {
         public BarracasListPage()
         {
+          
             InitializeComponent();
+            //searchBar.Behaviors.Add(new EventToCommandBehavior
+            //{
+            //    EventName = "TextChanged",
+            //    Command = ((BarracasListPageModel)BindingContext).SearchCommand,
+            //    Converter = new TextChangedEventArgsToTextChangedConverter()
+            //});
         }
         protected override void OnAppearing()
         {

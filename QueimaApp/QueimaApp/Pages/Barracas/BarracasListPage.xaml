@@ -8,7 +8,6 @@
   </ContentPage.ToolbarItems>
   <local:BasePage.Content>
     <StackLayout>
-      <SearchBar Placeholder="Introduza o nome da barraca"/>
       <ListView ItemsSource="{Binding Barracas}" SelectedItem="{Binding SelectedBarraca}" x:Name ="listView" >
         <ListView.ItemTemplate>
           <DataTemplate>

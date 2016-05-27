@@ -27,6 +27,8 @@ namespace QueimaApp.Pages
             AddPageWithIcon<AtividadesListPageModel>("Atividades Académicas", "icon.png", null);
             AddPageWithIcon<BarracasListPageModel>("Barracas", "icon.png", null);
             AddPageWithIcon<BilheteiraPageModel>("Bilheteira", "icon.png", null);
+            AddPageWithIcon<SocialPageModel>("Social", "icon.png", null);
+            AddPageWithIcon<ConcursosPageModel>("Concursos", "icon.png", null);
         }
 
         protected override void CreateMenuPage(string menuPageTitle, string menuIcon = null)

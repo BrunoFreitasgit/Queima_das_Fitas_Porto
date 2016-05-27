@@ -16,6 +16,11 @@ namespace QueimaApp.Pages
     {
         public BilheteiraPage()
         {
+            ToolbarItems.Add(new ToolbarItem("", "Home.png", () =>
+            {
+                Application.Current.MainPage = new NavigationPage(new LaunchPage((App)Application.Current));
+            }));
+
             var pontosVendaPage = FreshPageModelResolver.ResolvePageModel<PontoVendaListPageModel>();
             var bilhetesPage = FreshPageModelResolver.ResolvePageModel<BilhetesPageModel>();
             pontosVendaPage.Title = "Pontos de Venda";

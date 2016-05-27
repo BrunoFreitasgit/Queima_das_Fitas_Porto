@@ -38,7 +38,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Behaviors\BehaviorBase.cs" />
+    <Compile Include="Behaviors\EventToCommandBehavior.cs" />
     <Compile Include="Converters\StringToVisibilityConverter.cs" />
+    <Compile Include="Converters\TextChangedEventArgsToTextChangedConverter.cs" />
     <Compile Include="Extensions\EmbeddedImageResourceExtension.cs" />
     <Compile Include="Interfaces\IDatabaseService.cs" />
     <Compile Include="LaunchPage.cs" />
@@ -48,39 +51,64 @@
     <Compile Include="Models\Bilheteira.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\PontoVenda.cs" />
-    <Compile Include="PageModels\AtividadeMapaPageModel.cs" />
-    <Compile Include="PageModels\BarracaPageModel.cs" />
-    <Compile Include="PageModels\BarracasListPageModel.cs" />
-    <Compile Include="PageModels\BilheteiraPageModel.cs" />
-    <Compile Include="PageModels\BilhetesPageModel.cs" />
-    <Compile Include="PageModels\LoginFacebookMockPageModel.cs" />
-    <Compile Include="PageModels\PontoVendaListPageModel.cs" />
-    <Compile Include="PageModels\PontoVendaPageModel.cs" />
-    <Compile Include="Pages\AtividadeAcademicaPage.cs" />
-    <Compile Include="Pages\AtividadeMapaPage.xaml.cs">
+    <Compile Include="PageModels\Atividades Académicas\AtividadeMapaPageModel.cs" />
+    <Compile Include="PageModels\Barracas\BarracaPageModel.cs" />
+    <Compile Include="PageModels\Barracas\BarracasListPageModel.cs" />
+    <Compile Include="PageModels\Bilheteira\BilheteiraPageModel.cs" />
+    <Compile Include="PageModels\Bilheteira\BilhetesPageModel.cs" />
+    <Compile Include="PageModels\Concursos\ConcursoBandasPageModel.cs" />
+    <Compile Include="PageModels\Concursos\ConcursoCartazPageModel.cs" />
+    <Compile Include="PageModels\Concursos\ConcursoDjPageModel.cs" />
+    <Compile Include="PageModels\Concursos\ConcursosPageModel.cs" />
+    <Compile Include="PageModels\Social\FacebookWebPageModel.cs" />
+    <Compile Include="PageModels\Social\InstagramWebPageModel.cs" />
+    <Compile Include="PageModels\Social\LoginFacebookMockPageModel.cs" />
+    <Compile Include="PageModels\Bilheteira\PontoVendaListPageModel.cs" />
+    <Compile Include="PageModels\Bilheteira\PontoVendaPageModel.cs" />
+    <Compile Include="PageModels\Social\SocialPageModel.cs" />
+    <Compile Include="Pages\Atividades Académicas\AtividadeAcademicaPage.cs" />
+    <Compile Include="Pages\Atividades Académicas\AtividadeMapaPage.xaml.cs">
       <DependentUpon>AtividadeMapaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BarracaPage.xaml.cs">
+    <Compile Include="Pages\Barracas\BarracaPage.xaml.cs">
       <DependentUpon>BarracaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BarracasListPage.xaml.cs">
+    <Compile Include="Pages\Barracas\BarracasListPage.xaml.cs">
       <DependentUpon>BarracasListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BilheteiraPage.xaml.cs">
+    <Compile Include="Pages\Bilheteira\BilheteiraPage.xaml.cs">
       <DependentUpon>BilheteiraPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BilhetesPage.xaml.cs">
+    <Compile Include="Pages\Bilheteira\BilhetesPage.xaml.cs">
       <DependentUpon>BilhetesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\LoginFacebookMockPage.xaml.cs">
+    <Compile Include="Pages\Concursos\ConcursoBandasPage.xaml.cs">
+      <DependentUpon>ConcursoBandasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Concursos\ConcursoCartazPage.xaml.cs">
+      <DependentUpon>ConcursoCartazPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Concursos\ConcursoDjPage.xaml.cs">
+      <DependentUpon>ConcursoDjPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Concursos\ConcursosPage.xaml.cs">
+      <DependentUpon>ConcursosPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Social\FacebookWebPage.xaml.cs">
+      <DependentUpon>FacebookWebPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Social\InstagramWebPage.xaml.cs">
+      <DependentUpon>InstagramWebPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Social\LoginFacebookMockPage.xaml.cs">
       <DependentUpon>LoginFacebookMockPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MasterPageItem.cs" />
     <Compile Include="Models\Quote.cs" />
-    <Compile Include="PageModels\AtividadeAcademicaPageModel.cs" />
-    <Compile Include="PageModels\AtividadesListPageModel.cs" />
+    <Compile Include="PageModels\Atividades Académicas\AtividadeAcademicaPageModel.cs" />
+    <Compile Include="PageModels\Atividades Académicas\AtividadesListPageModel.cs" />
     <Compile Include="PageModels\ModalPageModel.cs" />
-    <Compile Include="Pages\AtividadesListPage.xaml.cs">
+    <Compile Include="Pages\Atividades Académicas\AtividadesListPage.xaml.cs">
       <DependentUpon>AtividadesListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\BasePage.cs" />
@@ -91,11 +119,14 @@
     <Compile Include="Pages\ModalPage.xaml.cs">
       <DependentUpon>ModalPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PontoVendaListPage.xaml.cs">
+    <Compile Include="Pages\Bilheteira\PontoVendaListPage.xaml.cs">
       <DependentUpon>PontoVendaListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PontoVendaPage.xaml.cs">
+    <Compile Include="Pages\Bilheteira\PontoVendaPage.xaml.cs">
       <DependentUpon>PontoVendaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Social\SocialPage.xaml.cs">
+      <DependentUpon>SocialPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DatabaseService.cs" />
@@ -194,13 +225,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\BilheteiraPage.xaml">
+    <EmbeddedResource Include="Pages\Bilheteira\BilheteiraPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\AtividadesListPage.xaml">
+    <EmbeddedResource Include="Pages\Atividades Académicas\AtividadesListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -212,49 +243,91 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\PontoVendaListPage.xaml">
+    <EmbeddedResource Include="Pages\Bilheteira\PontoVendaListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\AtividadeMapaPage.xaml">
+    <EmbeddedResource Include="Pages\Atividades Académicas\AtividadeMapaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\LoginFacebookMockPage.xaml">
+    <EmbeddedResource Include="Pages\Social\LoginFacebookMockPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\BarracasListPage.xaml">
+    <EmbeddedResource Include="Pages\Barracas\BarracasListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\PontoVendaPage.xaml">
+    <EmbeddedResource Include="Pages\Bilheteira\PontoVendaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\BilhetesPage.xaml">
+    <EmbeddedResource Include="Pages\Bilheteira\BilhetesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\BarracaPage.xaml">
+    <EmbeddedResource Include="Pages\Barracas\BarracaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Navigation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Social\SocialPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Social\FacebookWebPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Social\InstagramWebPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Concursos\ConcursoDjPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Concursos\ConcursoBandasPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Concursos\ConcursoCartazPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Concursos\ConcursosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

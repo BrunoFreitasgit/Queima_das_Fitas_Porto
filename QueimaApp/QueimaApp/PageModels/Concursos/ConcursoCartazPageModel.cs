@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 namespace QueimaApp.PageModels
 {
     [ImplementPropertyChanged]
-    public class BilheteiraPageModel : FreshBasePageModel
+    public class ConcursoCartazPageModel : FreshBasePageModel
     {
-        public BilheteiraPageModel()
+        public ConcursoCartazPageModel()
         {
 
         }
-
         public override void Init(object initData)
         {
 
