@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{97D360FC-F6AC-4083-8D9D-F28A73E530FE}</ProjectGuid>
+    <ProjectGuid>{598F18E6-A2F1-4EEA-929D-357B026CA362}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>QueimaApp.iOS</RootNamespace>
@@ -48,8 +48,20 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
+    <MtouchDebug>True</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchSdkVersion />
+    <MtouchLink>None</MtouchLink>
+    <MtouchProfiling>False</MtouchProfiling>
+    <MtouchFastDev>False</MtouchFastDev>
+    <MtouchUseLlvm>False</MtouchUseLlvm>
+    <MtouchUseThumb>False</MtouchUseThumb>
+    <MtouchUseSGen>False</MtouchUseSGen>
+    <MtouchUseRefCounting>False</MtouchUseRefCounting>
+    <OptimizePNGs>True</OptimizePNGs>
+    <MtouchFloat32>False</MtouchFloat32>
+    <DeviceSpecificBuild>False</DeviceSpecificBuild>
+    <MtouchI18n />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -91,9 +103,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
-    <None Include="Info.plist">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
@@ -166,11 +176,11 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.3.0.38-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps">
+    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.0.38-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps.iOS">
+    <Reference Include="Xamarin.Forms.Maps.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.0.38-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
@@ -202,17 +212,45 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <BundleResource Include="Resources\BaileGala.jpg" />
+    <BundleResource Include="Resources\BaileGala_tb.jpg" />
+    <BundleResource Include="Resources\ChaDancante.jpg" />
+    <BundleResource Include="Resources\ChaDancante_tb.jpg" />
+    <BundleResource Include="Resources\contacts.png" />
+    <BundleResource Include="Resources\Cortejo.jpg" />
+    <BundleResource Include="Resources\Cortejo_tb.jpg" />
+    <BundleResource Include="Resources\DiaBeneficiencia.jpg" />
+    <BundleResource Include="Resources\DiaBeneficiencia_tb.jpg" />
+    <BundleResource Include="Resources\document.png" />
+    <BundleResource Include="Resources\ECAP.jpg" />
+    <BundleResource Include="Resources\ECAP_tb.jpg" />
+    <BundleResource Include="Resources\FITA.jpg" />
+    <BundleResource Include="Resources\FITA_tb.jpg" />
+    <BundleResource Include="Resources\Home.png" />
+    <BundleResource Include="Resources\Menu.png" />
+    <BundleResource Include="Resources\MissaBencao.jpg" />
+    <BundleResource Include="Resources\MissaBencao_tb.jpg" />
+    <BundleResource Include="Resources\MonumentalSerenata.jpg" />
+    <BundleResource Include="Resources\MonumentalSerenata_tb.jpg" />
+    <BundleResource Include="Resources\pin.png" />
+    <BundleResource Include="Resources\Promenade.jpg" />
+    <BundleResource Include="Resources\Promenade_tb.jpg" />
+    <BundleResource Include="Resources\RallyPaper.jpg" />
+    <BundleResource Include="Resources\RallyPaper_tb.jpg" />
+    <BundleResource Include="Resources\Sarau.jpg" />
+    <BundleResource Include="Resources\Sarau_tb.jpg" />
+    <BundleResource Include="Resources\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.0.38-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.0.38-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Fody.1.29.2\build\dotnet\Fody.targets'))" />
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.0.38-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.0.38-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Fody.1.29.2\build\dotnet\Fody.targets'))" />
     <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
   </Target>
   <Import Project="..\..\packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('..\..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.3.0.38-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.0.38-pre2\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
 </Project>

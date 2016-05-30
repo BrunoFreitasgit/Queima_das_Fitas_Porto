@@ -56,6 +56,9 @@
     <Compile Include="PageModels\Barracas\BarracasListPageModel.cs" />
     <Compile Include="PageModels\Bilheteira\BilheteiraPageModel.cs" />
     <Compile Include="PageModels\Bilheteira\BilhetesPageModel.cs" />
+    <Compile Include="PageModels\Cartaz\CartazDiscotecaPageModel.cs" />
+    <Compile Include="PageModels\Cartaz\CartazPageModel.cs" />
+    <Compile Include="PageModels\Cartaz\CartazPalcoPageModel.cs" />
     <Compile Include="PageModels\Concursos\ConcursoBandasPageModel.cs" />
     <Compile Include="PageModels\Concursos\ConcursoCartazPageModel.cs" />
     <Compile Include="PageModels\Concursos\ConcursoDjPageModel.cs" />
@@ -66,6 +69,10 @@
     <Compile Include="PageModels\Bilheteira\PontoVendaListPageModel.cs" />
     <Compile Include="PageModels\Bilheteira\PontoVendaPageModel.cs" />
     <Compile Include="PageModels\Social\SocialPageModel.cs" />
+    <Compile Include="PageModels\Transportes\TransporteMetroPageModel.cs" />
+    <Compile Include="PageModels\Transportes\TransportesPageModel.cs" />
+    <Compile Include="PageModels\Transportes\TransporteSTCPPageModel.cs" />
+    <Compile Include="PageModels\Transportes\TransporteTaxiPageModel.cs" />
     <Compile Include="Pages\Atividades Académicas\AtividadeAcademicaPage.cs" />
     <Compile Include="Pages\Atividades Académicas\AtividadeMapaPage.xaml.cs">
       <DependentUpon>AtividadeMapaPage.xaml</DependentUpon>
@@ -81,6 +88,15 @@
     </Compile>
     <Compile Include="Pages\Bilheteira\BilhetesPage.xaml.cs">
       <DependentUpon>BilhetesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cartaz\CartazDiscotecaPage.xaml.cs">
+      <DependentUpon>CartazDiscotecaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cartaz\CartazPage.xaml.cs">
+      <DependentUpon>CartazPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cartaz\CartazPalcoPage.xaml.cs">
+      <DependentUpon>CartazPalcoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Concursos\ConcursoBandasPage.xaml.cs">
       <DependentUpon>ConcursoBandasPage.xaml</DependentUpon>
@@ -127,6 +143,18 @@
     </Compile>
     <Compile Include="Pages\Social\SocialPage.xaml.cs">
       <DependentUpon>SocialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Transportes\TransporteMetroPage.xaml.cs">
+      <DependentUpon>TransporteMetroPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Transportes\TransportesPage.xaml.cs">
+      <DependentUpon>TransportesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Transportes\TransporteSTCPPage.xaml.cs">
+      <DependentUpon>TransporteSTCPPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Transportes\TransporteTaxiPage.xaml.cs">
+      <DependentUpon>TransporteTaxiPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DatabaseService.cs" />
@@ -325,6 +353,48 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Concursos\ConcursosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Transportes\TransportesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Transportes\TransporteSTCPPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Transportes\TransporteMetroPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Transportes\TransporteTaxiPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Cartaz\CartazPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Cartaz\CartazDiscotecaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Cartaz\CartazPalcoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

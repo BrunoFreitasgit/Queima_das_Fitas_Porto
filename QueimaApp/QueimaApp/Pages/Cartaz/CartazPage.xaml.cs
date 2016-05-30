@@ -11,26 +11,27 @@ using Xamarin.Forms.Xaml;
 
 namespace QueimaApp.Pages
 {
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SocialPage : TabbedPage
+    public partial class CartazPage : TabbedPage
     {
-        public SocialPage()
+        public CartazPage()
         {
+
             InitializeComponent();
             ToolbarItems.Add(new ToolbarItem("", "Home.png", () =>
             {
                 Application.Current.MainPage = new NavigationPage(new LaunchPage((App)Application.Current));
             }));
 
-            var facebookPage = FreshPageModelResolver.ResolvePageModel<FacebookWebPageModel>();
-            var instaPage = FreshPageModelResolver.ResolvePageModel<InstagramWebPageModel>();
-            facebookPage.Title = "Facebook";
-            instaPage.Title = "Instagram";
-            facebookPage.Icon = "icon.png";
-            instaPage.Icon = "icon.png";
-            this.Children.Add(facebookPage);
-            this.Children.Add(instaPage);
-
+            var discotecaPage = FreshPageModelResolver.ResolvePageModel<CartazDiscotecaPageModel>();
+            var palcoPage = FreshPageModelResolver.ResolvePageModel<CartazPalcoPageModel>();
+            discotecaPage.Title = "Discoteca";
+            palcoPage.Title = "Palco";
+            discotecaPage.Icon = "icon.png";
+            palcoPage.Icon = "icon.png";
+            this.Children.Add(palcoPage);
+            this.Children.Add(discotecaPage);
         }
     }
 }
