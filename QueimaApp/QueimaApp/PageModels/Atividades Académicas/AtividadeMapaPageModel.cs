@@ -64,8 +64,6 @@ namespace QueimaApp.PageModels
             {
                 return new Command(() =>
                 {
-                    // TODO: faz push 2 vezes do mapa, nao sei porque
-                    CoreMethods.PopPageModel(true);
                     CoreMethods.PopPageModel(true);
                 });
             }

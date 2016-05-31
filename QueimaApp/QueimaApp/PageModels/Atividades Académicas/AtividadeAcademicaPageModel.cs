@@ -20,6 +20,11 @@ namespace QueimaApp.PageModels
         }
         public AtividadeAcademicaPageModel(){}
 
+        public override void ReverseInit(object returndData)
+        {
+            base.ReverseInit(returndData);
+        }
+
         public override void Init(object initData)
         {
             if (initData != null)
@@ -44,7 +49,7 @@ namespace QueimaApp.PageModels
                 return new Command(async () => {
                     // TODO
                     // PUSH MAPVIEW WITH COORDINATES
-                    await CoreMethods.PushPageModel<AtividadeMapaPageModel>(AtividadeAcademica, true);
+                    await CoreMethods.PushPageModel<AtividadeMapaPageModel>(AtividadeAcademica);
                 }
                 );
             }

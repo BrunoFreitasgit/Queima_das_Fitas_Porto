@@ -3,7 +3,4 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.AtividadeMapaPage"
              Title ="{Binding Nome}">
-  <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Fechar" Command="{Binding CloseCommand}"/>
-  </ContentPage.ToolbarItems>
 </ContentPage>

@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.BarracasListPage"
              xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
              Title="Barracas">
   <ContentPage.ToolbarItems>
   </ContentPage.ToolbarItems>
-  <local:BasePage.Content>
+  <ContentPage.Content>
     <StackLayout>
+      <SearchBar x:Name="searchBar" Placeholder="Procura pela tua barraca" Text="{Binding SearchText}" SearchCommand="{Binding SearchCommand}"/>
       <ListView ItemsSource="{Binding Barracas}" SelectedItem="{Binding SelectedBarraca}" x:Name ="listView" >
         <ListView.ItemTemplate>
           <DataTemplate>
@@ -16,5 +17,5 @@
         </ListView.ItemTemplate>
       </ListView>
     </StackLayout>
-  </local:BasePage.Content>
-</local:BasePage>
+  </ContentPage.Content>
+</ContentPage>

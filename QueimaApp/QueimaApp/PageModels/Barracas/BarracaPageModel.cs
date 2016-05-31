@@ -13,7 +13,9 @@ namespace QueimaApp.PageModels
     public class BarracaPageModel : FreshBasePageModel
     {
         public Barraca Barraca { get; set; }
+
         public string Titulo { get; set; }
+
         public override void Init(object initData)
         {
             if (initData != null)
@@ -26,5 +28,6 @@ namespace QueimaApp.PageModels
                 Barraca = new Barraca();
             }
         }
+
     }
 }

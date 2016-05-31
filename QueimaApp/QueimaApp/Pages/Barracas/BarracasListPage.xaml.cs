@@ -13,18 +13,11 @@ using Xamarin.Forms.Xaml;
 namespace QueimaApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BarracasListPage : BasePage
+    public partial class BarracasListPage : ContentPage
     {
         public BarracasListPage()
         {
-          
             InitializeComponent();
-            //searchBar.Behaviors.Add(new EventToCommandBehavior
-            //{
-            //    EventName = "TextChanged",
-            //    Command = ((BarracasListPageModel)BindingContext).SearchCommand,
-            //    Converter = new TextChangedEventArgsToTextChangedConverter()
-            //});
         }
         protected override void OnAppearing()
         {
