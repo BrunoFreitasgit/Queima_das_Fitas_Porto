@@ -71,6 +71,7 @@ namespace QueimaApp.Pages
                 TextColor = Color.FromHex("#ddd"),
                 HorizontalOptions = LayoutOptions.StartAndExpand,
             };
+
             var preçoLabel = new Label
             {
                 Text = "Preço: ",
@@ -139,7 +140,6 @@ namespace QueimaApp.Pages
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.SetBinding(TapGestureRecognizer.CommandProperty, "LocationCommand");
             pin.GestureRecognizers.Add(tapGestureRecognizer);
-
 
             var description = new Frame()
             {

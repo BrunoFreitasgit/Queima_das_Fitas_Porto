@@ -45,12 +45,14 @@
     <Compile Include="Extensions\EmbeddedImageResourceExtension.cs" />
     <Compile Include="Interfaces\IDatabaseService.cs" />
     <Compile Include="LaunchPage.cs" />
+    <Compile Include="Models\Artista.cs" />
     <Compile Include="Models\AtividadeAcademica.cs" />
     <Compile Include="Models\Barraca.cs" />
     <Compile Include="Models\Bilhete.cs" />
     <Compile Include="Models\Bilheteira.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\PontoVenda.cs" />
+    <Compile Include="PageModels\Cartaz\ArtistaPageModel.cs" />
     <Compile Include="PageModels\Atividades Académicas\AtividadeMapaPageModel.cs" />
     <Compile Include="PageModels\Barracas\BarracaPageModel.cs" />
     <Compile Include="PageModels\Barracas\BarracasListPageModel.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="PageModels\Transportes\TransportesPageModel.cs" />
     <Compile Include="PageModels\Transportes\TransporteSTCPPageModel.cs" />
     <Compile Include="PageModels\Transportes\TransporteTaxiPageModel.cs" />
+    <Compile Include="Pages\Cartaz\ArtistaPage.cs" />
     <Compile Include="Pages\Atividades Académicas\AtividadeAcademicaPage.cs" />
     <Compile Include="Pages\Atividades Académicas\AtividadeMapaPage.xaml.cs">
       <DependentUpon>AtividadeMapaPage.xaml</DependentUpon>

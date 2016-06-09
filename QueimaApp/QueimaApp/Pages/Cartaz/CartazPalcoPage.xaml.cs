@@ -17,5 +17,10 @@ namespace QueimaApp.Pages
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            listView.SelectedItem = null;
+            base.OnAppearing();
+        }
     }
 }

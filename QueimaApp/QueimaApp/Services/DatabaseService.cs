@@ -19,12 +19,14 @@ namespace QueimaApp.Services
         private List<PontoVenda> _pontosVenda;
         private List<Barraca> _barracas;
         private List<Bilhete> _bilhetes;
+        private List<Artista> _artistas;
         public DatabaseService()
         {
             _atividades = InitAtividades();
             _pontosVenda = InitPontosVenda();
             _barracas = InitBarracas();
             _bilhetes = InitBilhetes();
+            _artistas = InitArtistas();
         }
 
         private List<AtividadeAcademica> InitAtividades()
@@ -32,7 +34,8 @@ namespace QueimaApp.Services
             return new List<AtividadeAcademica>
            {
                new AtividadeAcademica {
-                   Id = 1 , Nome = "Baile de Gala" ,
+                   Id = 1 ,
+                   Nome = "Baile de Gala" ,
                    Descricao = "O Festival Ibérico de Tunas Académicas proporciona, para além do espetáculo, um ambiente de convívio entre tunas, estudantes, finalistas e entusiastas da cidade do Porto. Inserido no programa da Queima das Fitas do Porto, o FITA afirmou-se nos últimos anos como um dos maiores e mais enérgicos festivais de tunas do país." ,
                    Preço = "3,00€" ,
                    ImagePath = "BaileGala_tb.jpg" ,
@@ -215,7 +218,7 @@ namespace QueimaApp.Services
         {
             return _pontosVenda;
         }
-        public List<Barraca> InitBarracas()
+        private List<Barraca> InitBarracas()
         {
             var assembly = typeof(DatabaseService).GetTypeInfo().Assembly;
             Stream stream = assembly.GetManifestResourceStream("QueimaApp.Json_test.barracas.json");
@@ -233,7 +236,7 @@ namespace QueimaApp.Services
         {
             return _barracas;
         }
-        public List<Bilhete> InitBilhetes()
+        private List<Bilhete> InitBilhetes()
         {
             //TODO
             return new List<Bilhete>();
@@ -242,5 +245,182 @@ namespace QueimaApp.Services
         {
             return _bilhetes;
         }
+
+        private List<Artista> InitArtistas()
+        {
+            return new List<Artista>
+            {
+                new Artista
+                {
+                    Id = 1,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,01),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                 new Artista
+                {
+                    Id = 2,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,01),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                  new Artista
+                {
+                    Id = 3,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,02),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                   new Artista
+                {
+                    Id = 4,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,02),
+                    Nome = "Artista 1",
+                    Palco = Palco.Discoteca,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                    new Artista
+                {
+                    Id = 5,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,02),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                     new Artista
+                {
+                    Id = 6,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,03),
+                    Nome = "Artista 1",
+                    Palco = Palco.Discoteca,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                      new Artista
+                {
+                    Id = 7,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,04),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                       new Artista
+                {
+                    Id = 8,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,04),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                        new Artista
+                {
+                    Id = 9,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,05),
+                    Nome = "Artista 1",
+                    Palco = Palco.Discoteca,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                         new Artista
+                {
+                    Id = 10,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,05),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                          new Artista
+                {
+                    Id = 11,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,06),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                           new Artista
+                {
+                    Id = 12,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,06),
+                    Nome = "Artista 1",
+                    Palco = Palco.PalcoPrincipal,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+                            new Artista
+                {
+                    Id = 13,
+                    Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
+                    Data = new DateTime(2017,05,07),
+                    Nome = "Artista 1",
+                    Palco = Palco.Discoteca,
+                    FacebookLink = "https://www.facebook.com/FAP1989",
+                    SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
+                    TwitterLink = "https://twitter.com/skunkanansie",
+                    ImagemUri = "http://www.suasletras.com/fotos_artista/50bbf37db0a64f5c659e1371731d6226.jpg"
+                },
+            };
+        }
+        public List<Artista> GetArtistas()
+        {
+            return _artistas;
+        }
+        public List<Artista> GetArtistasByPalco(Palco p)
+        {
+            var filtred_artistas = new List<Artista>();
+
+            filtred_artistas = (from a in _artistas
+                                where a.Palco.Equals(p)
+                                select a).ToList<Artista>();
+            return filtred_artistas;
+        }
+
     }
 }
