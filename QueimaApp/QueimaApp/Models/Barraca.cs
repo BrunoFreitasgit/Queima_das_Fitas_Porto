@@ -13,7 +13,9 @@ namespace QueimaApp.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public double Latitude { get; set; }
+        public string ImagePath { get; set; }
         public double Longitude { get; set; }
+        public string FacebookEventURL { get; set; }
         public Barraca()
         {
                 

@@ -1,0 +1,26 @@
+﻿[
+  {
+    "id": "1",
+    "latitude": "0",
+    "longitude": "-8.684546202",
+    "nome": "TasC.O.N.A",
+    "imagepath": "https://scontent-mad1-1.xx.fbcdn.net/t31.0-8/13071931_10156857194500284_1527471880762328276_o.jpg",
+    "facebookeventurl": "https://www.facebook.com/events/1490179234619979/"
+  },
+  {
+    "id": "2",
+    "latitude": "0",
+    "longitude": "0",
+    "nome": "ENJOY IT",
+    "imagepath": "https://scontent-mad1-1.xx.fbcdn.net/t31.0-8/13071931_10156857194500284_1527471880762328276_o.jpg",
+    "facebookeventurl": ""
+  },
+  {
+    "id": "3",
+    "latitude": "41.173299917",
+    "longitude": "-8.684762120",
+    "nome": "Snapshots",
+    "imagepath": "https://scontent-mad1-1.xx.fbcdn.net/t31.0-8/13071931_10156857194500284_1527471880762328276_o.jpg",
+    "facebookeventurl": "https://www.facebook.com/events/1490179234619979/"
+  }
+]

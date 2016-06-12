@@ -221,7 +221,7 @@ namespace QueimaApp.Services
         private List<Barraca> InitBarracas()
         {
             var assembly = typeof(DatabaseService).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("QueimaApp.Json_test.barracas.json");
+            Stream stream = assembly.GetManifestResourceStream("QueimaApp.Json_test.barracas_teste.json");
 
             List<Barraca> myData;
             using (var reader = new System.IO.StreamReader(stream))
