@@ -5,5 +5,5 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem Text="Agora não" Command="{Binding CloseCommand}"/>
   </ContentPage.ToolbarItems>
-  <Label Text="Esta será a página de Login do Facebook" VerticalOptions="Center" HorizontalOptions="Center" />
+  
 </ContentPage>

@@ -2,6 +2,16 @@
 <Application  xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.App">
-  
+  <Application.Resources>
+    <ResourceDictionary>
 
+      <!-- Styles -->
+      <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="#f44336"/>
+        <Setter Property="BarTextColor" Value="White"/>
+      </Style>
+      <!-- Styles -->
+
+    </ResourceDictionary>
+  </Application.Resources>
 </Application >

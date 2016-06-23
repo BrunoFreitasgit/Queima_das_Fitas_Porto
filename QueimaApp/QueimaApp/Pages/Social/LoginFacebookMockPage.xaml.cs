@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Connectivity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,19 @@ namespace QueimaApp.Pages
         public LoginFacebookMockPage()
         {
             InitializeComponent();
+        }
+        protected override void OnAppearing()
+        {
+            TestConnection();
+            base.OnAppearing();
+        }
+        private void TestConnection()
+        {
+            if (CrossConnectivity.Current.IsConnected)
+            {
+                DisplayAlert("Alerta", "Tem acesso", "Ok");
+            }
+
         }
     }
 }

@@ -85,8 +85,14 @@ namespace QueimaApp.Pages
         protected override Page CreateContainerPage(Page page)
         {
             var navigation = new NavigationPage(page);
-            navigation.BarTextColor = Color.White;
-
+            if(Device.OS == TargetPlatform.iOS)
+            {
+                navigation.BarTextColor = Color.Red;
+            }else
+            {
+                navigation.BarTextColor = Color.White;
+            }
+            
             return navigation;
         }
 
@@ -99,6 +105,5 @@ namespace QueimaApp.Pages
                 IconSource = icon
             });
         }
-
     }
 }

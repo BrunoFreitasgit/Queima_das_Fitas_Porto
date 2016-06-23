@@ -15,9 +15,8 @@ namespace QueimaApp.Pages
     {
         public AtividadeMapaPage()
         {
-            InitializeComponent();    
             this.createView();
-            
+            InitializeComponent(); 
         }
 
         private void createView()
