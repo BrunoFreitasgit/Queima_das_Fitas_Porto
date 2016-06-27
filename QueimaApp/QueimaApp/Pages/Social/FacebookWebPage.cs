@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace QueimaApp.Pages
 {
-    public partial class FacebookWebPage : ContentPage
+    public class FacebookWebPage : ContentPage
     {
         public FacebookWebPage()
         {
-            InitializeComponent();
+            var browser = new WebView();
+
+            browser.Source = "https://www.facebook.com/FAP1989/";
+
+            Content = browser;
         }
     }
 }

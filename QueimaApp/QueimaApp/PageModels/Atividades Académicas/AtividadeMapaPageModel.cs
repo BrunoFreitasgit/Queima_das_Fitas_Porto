@@ -58,15 +58,15 @@ namespace QueimaApp.PageModels
 
         }
 
-        public Command CloseCommand
-        {
-            get
-            {
-                return new Command(() =>
-                {
-                    CoreMethods.PopPageModel(true);
-                });
-            }
-        }
+        //public Command CloseCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(() =>
+        //        {
+        //            CoreMethods.PopPageModel(true);
+        //        });
+        //    }
+        //}
     }
 }

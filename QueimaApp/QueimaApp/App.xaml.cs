@@ -1,20 +1,30 @@
 ﻿using FreshMvvm;
+using QueimaApp.DataAccess;
 using QueimaApp.Interfaces;
-using QueimaApp.PageModels;
 using QueimaApp.Pages;
 using QueimaApp.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace QueimaApp
 {
+
     public partial class App : Application
     {
+        static QueimaRepository QueimaDbUtil;
+
+        public static QueimaRepository QueimaDA
+        {
+            get
+            {
+                if (QueimaDbUtil == null)
+                {
+                    QueimaDbUtil = new QueimaRepository();
+                }
+                return QueimaDbUtil;
+            }
+        }
 
         public App()
         {

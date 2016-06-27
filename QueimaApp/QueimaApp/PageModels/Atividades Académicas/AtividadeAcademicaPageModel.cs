@@ -31,7 +31,7 @@ namespace QueimaApp.PageModels
             {
                 AtividadeAcademica = (AtividadeAcademica)initData;
                 Titulo = AtividadeAcademica.Nome;
-                if (!string.IsNullOrEmpty(AtividadeAcademica.Preço))
+                if (!string.IsNullOrEmpty(AtividadeAcademica.Preco))
                 {
                     IsPrecoVisible = true;
                     IsPontoVendaVisible = true;

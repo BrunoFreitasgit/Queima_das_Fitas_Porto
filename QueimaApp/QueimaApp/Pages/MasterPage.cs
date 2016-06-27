@@ -18,14 +18,15 @@ namespace QueimaApp.Pages
         {
             this.Init("Menu", "Menu.png");
             AddPages();
-            var loginPage = FreshPageModelResolver.ResolvePageModel<LoginFacebookMockPageModel>();
-            if(Device.OS == TargetPlatform.iOS)
-            {
-                PushPage(new NavigationPage(loginPage), null, true);
-            }else
-            {
-                PushPage(loginPage, null, true);
-            }
+            //var loginPage = FreshPageModelResolver.ResolvePageModel<LoginFacebookMockPageModel>();
+            //var atividadesPage = FreshPageModelResolver.ResolvePageModel<AtividadesListPageModel>();
+            //if(Device.OS == TargetPlatform.iOS)
+            //{
+            //    PushPage(new NavigationPage(atividadesPage), null, true);
+            //}else
+            //{
+            //    PushPage(atividadesPage, null, true);
+            //}
             
         }
 

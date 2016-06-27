@@ -6,6 +6,7 @@
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "modernhttpclient": "2.4.2",
     "PropertyChanged.Fody": "1.51.0",
+    "SQLite.Net-PCL": "3.1.1",
     "TK.CustomMap": "1.5.0",
     "Xam.Plugin.Connectivity": "2.2.2",
     "Xam.Plugins.Forms.ImageCircle": "1.4.1",

@@ -26,7 +26,10 @@ namespace QueimaApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::FacebookMonoDroid.Resource.String.library_name = global::QueimaApp.Droid.Resource.String.library_name;
 			global::ModernHttpClient.Resource.String.library_name = global::QueimaApp.Droid.Resource.String.library_name;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::QueimaApp.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::QueimaApp.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::QueimaApp.Droid.Resource.Attribute.actionBarSize;
 		}
 		
