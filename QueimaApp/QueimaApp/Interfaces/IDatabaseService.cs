@@ -17,6 +17,6 @@ namespace QueimaApp.Interfaces
         List<Barraca> GetBarracas();
         List<Bilhete> GetBilhetes();
         List<Artista> GetArtistas();
-        List<Artista> GetArtistasByPalco(Palco p);
+        List<Artista> GetArtistasByPalco(int p);
     }
 }

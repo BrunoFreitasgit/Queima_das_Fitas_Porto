@@ -256,7 +256,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,01),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -268,7 +268,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,01),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -280,7 +280,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,02),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -292,7 +292,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,02),
                     Nome = "Artista 1",
-                    Palco = Palco.Discoteca,
+                    Palco = "Discoteca",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -304,7 +304,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,02),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Discoteca",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -316,7 +316,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,03),
                     Nome = "Artista 1",
-                    Palco = Palco.Discoteca,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -328,7 +328,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,04),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -340,7 +340,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,04),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -352,7 +352,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,05),
                     Nome = "Artista 1",
-                    Palco = Palco.Discoteca,
+                    Palco = "Discoteca",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -364,7 +364,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,05),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -376,7 +376,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,06),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -388,7 +388,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,06),
                     Nome = "Artista 1",
-                    Palco = Palco.PalcoPrincipal,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -400,7 +400,7 @@ namespace QueimaApp.Services
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     Data = new DateTime(2017,05,07),
                     Nome = "Artista 1",
-                    Palco = Palco.Discoteca,
+                    Palco = "Palco Principal",
                     FacebookLink = "https://www.facebook.com/FAP1989",
                     SpotifyLink = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterLink = "https://twitter.com/skunkanansie",
@@ -412,12 +412,16 @@ namespace QueimaApp.Services
         {
             return _artistas;
         }
-        public List<Artista> GetArtistasByPalco(Palco p)
+        public List<Artista> GetArtistasByPalco(int p)
         {
+            string palco;
+            if (p == 0) palco = "Palco Principal";
+            else palco = "Discoteca";
+
             var filtred_artistas = new List<Artista>();
 
             filtred_artistas = (from a in _artistas
-                                where a.Palco.Equals(p)
+                                where a.Palco.Equals(palco)
                                 select a).ToList<Artista>();
             return filtred_artistas;
         }
