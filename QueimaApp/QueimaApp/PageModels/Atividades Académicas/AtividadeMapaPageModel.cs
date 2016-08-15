@@ -35,11 +35,11 @@ namespace QueimaApp.PageModels
             {
                 IsVisible = true,
                 Title = Atividade.Local,
-                Position = new Position(Atividade.Latitude, Atividade.Longitude),
+                Position = new Position(Atividade.LocalLatitude, Atividade.LocalLongitude),
                 ShowCallout = true
             };
             Pins.Add(Pin);
-            MapCenter = new Position(Atividade.Latitude, Atividade.Longitude);
+            MapCenter = new Position(Atividade.LocalLatitude, Atividade.LocalLongitude);
             MapRegion = MapSpan.FromCenterAndRadius(Pin.Position, Distance.FromKilometers(0.5));
         }
         protected override void ViewIsAppearing(object sender, System.EventArgs e)

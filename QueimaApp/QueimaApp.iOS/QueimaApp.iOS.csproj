@@ -135,12 +135,16 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FreshIOC, Version=1.0.5977.25641, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FreshMvvm.2.1.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshIOC.dll</HintPath>
+    <Reference Include="EnumAnnotations, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EnumAnnotation.3.0.2\lib\portable-net403+sl5+win8\EnumAnnotations.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FreshMvvm, Version=1.0.5977.25710, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FreshMvvm.2.1.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshMvvm.dll</HintPath>
+    <Reference Include="FreshIOC, Version=1.0.6071.17008, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreshMvvm.2.2.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshIOC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FreshMvvm, Version=1.0.6071.17008, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreshMvvm.2.2.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshMvvm.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.6.0.8, Culture=neutral, processorArchitecture=MSIL">
@@ -180,6 +184,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Json" />
     <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.dll</HintPath>

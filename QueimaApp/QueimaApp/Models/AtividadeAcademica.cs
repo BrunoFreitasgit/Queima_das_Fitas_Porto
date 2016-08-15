@@ -17,12 +17,12 @@ namespace QueimaApp.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
+        public double LocalLatitude { get; set; }
+        public double LocalLongitude { get; set; }
         public string Preco { get; set; }
         public string Data { get; set; }
         public string ImagePath { get; set; }
-        public string PontoVenda { get; set; }
+        public string PontosVenda { get; set; }
         public string Local { get; set; }
         public AtividadeAcademica()
         {

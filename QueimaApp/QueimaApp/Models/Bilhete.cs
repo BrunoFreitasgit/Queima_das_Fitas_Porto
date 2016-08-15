@@ -15,11 +15,12 @@ namespace QueimaApp.Models
     {
         [PrimaryKey]
         public int Id { get; set; }
-        public DateTime Data { get; set; }
-        public decimal PrecoNormal { get; set; }
-        public decimal PrecoDiaAnterior { get; set; }
-        public decimal PrecoNoDia { get; set; }
-        public decimal PrecoNoDiaApos { get; set; }
+        public string Data { get; set; }
+        public string PrecoNormal { get; set; }
+        public string PrecoDiaAnterior { get; set; }
+        public string PrecoNoDia { get; set; }
+        public string PrecoNoDiaForaHoras { get; set; }
+        public string BilheteiraOnlineUrl { get; set; }
         public Bilhete()
         {
         }

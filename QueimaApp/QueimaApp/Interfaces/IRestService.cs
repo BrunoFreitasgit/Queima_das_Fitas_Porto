@@ -15,7 +15,10 @@ namespace QueimaApp.Interfaces
 
         Task<List<AtividadeAcademica>> AtividadesRefreshAsync();
 
-        Task<List<Bilheteira>> BilheteiraRefreshAsync();
+        Task<Bilheteira> BilheteiraRefreshAsync();
 
+        Task<List<Concurso>> ConcursosRefreshAsync();
+
+        Task<List<Media>> MediaRefreshAsync();
     }
 }

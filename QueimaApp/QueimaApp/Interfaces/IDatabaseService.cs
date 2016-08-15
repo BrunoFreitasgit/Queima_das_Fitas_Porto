@@ -9,9 +9,6 @@ namespace QueimaApp.Interfaces
 {
     public interface IDatabaseService
     {
-
-
-
         List<AtividadeAcademica> GetAtividades();
         List<PontoVenda> GetPontosVenda();
         List<Barraca> GetBarracas();
