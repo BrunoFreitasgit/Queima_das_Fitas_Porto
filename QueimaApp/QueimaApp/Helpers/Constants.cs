@@ -9,7 +9,7 @@ namespace QueimaApp.Helpers
     public static class Constants
     {
         // URL of REST service
-        public static string RestUrl = "http://localhost:3080/api/";
+        public static string RestUrl = "http://localhost:3080/api/atividadesacademicas";
 
         public static string TransportesUrl = "Transportes";
 

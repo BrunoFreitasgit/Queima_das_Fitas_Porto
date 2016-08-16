@@ -12,23 +12,25 @@ namespace QueimaApp
 
     public partial class App : Application
     {
-        static QueimaRepository QueimaDbUtil;
+        static QueimaRepository QueimaDb;
 
         public static QueimaRepository QueimaDA
         {
             get
             {
-                if (QueimaDbUtil == null)
+                if (QueimaDb == null)
                 {
-                    QueimaDbUtil = new QueimaRepository();
+                    QueimaDb = new QueimaRepository();
                 }
-                return QueimaDbUtil;
+                return QueimaDb;
             }
         }
 
         public App()
         {
             FreshIOC.Container.Register<IDatabaseService, DatabaseService>();
+            FreshIOC.Container.Register<IRestService, RestService>();
+            FreshIOC.Container.Register<IQueimaRepository, QueimaRepository>();
             //FreshIOC.Container.Register<>
             //MainPage = new CustomImplementedNav();
             MainPage = new MasterPage();

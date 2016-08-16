@@ -1,6 +1,7 @@
 ﻿
 using PropertyChanged;
 using SQLite.Net.Attributes;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace QueimaApp.Models
 {
-    [Table("Bilhete")]
+    [Table("Bilhetes")]
     [ImplementPropertyChanged]
     public class Bilhete
     {
@@ -21,6 +22,8 @@ namespace QueimaApp.Models
         public string PrecoNoDia { get; set; }
         public string PrecoNoDiaForaHoras { get; set; }
         public string BilheteiraOnlineUrl { get; set; }
+        [ForeignKey(typeof(Bilheteira))]
+        public int BilheteiraID { get; set; }
         public Bilhete()
         {
         }

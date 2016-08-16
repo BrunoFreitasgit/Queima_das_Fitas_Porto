@@ -9,7 +9,7 @@ using Xamarin.Forms.Internals;
 
 namespace QueimaApp.Models
 {
-    [Table("AtividadeAcademica")]
+    [Table("AtividadesAcademicas")]
     [ImplementPropertyChanged]
     public class AtividadeAcademica
     {

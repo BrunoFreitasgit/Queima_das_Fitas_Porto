@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QueimaApp.Models
 {
-    [Table("Barraca")]
+    [Table("Barracas")]
     [ImplementPropertyChanged]
     public class Barraca
     {

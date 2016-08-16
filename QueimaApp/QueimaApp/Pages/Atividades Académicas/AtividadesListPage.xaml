@@ -7,7 +7,8 @@
   <ContentPage.ToolbarItems>
   </ContentPage.ToolbarItems>
   <local:BasePage.Content>
-    <ListView ItemsSource="{Binding Atividades}" SelectedItem="{Binding SelectedAtividade}" x:Name ="listView" >
+    <ListView ItemsSource="{Binding Atividades}" SelectedItem="{Binding SelectedAtividade}" x:Name ="listView" IsPullToRefreshEnabled="True"
+               RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ImageCell Text="{Binding Nome}" Detail="{Binding Data}" ImageSource="{Binding ImagePath}"/>

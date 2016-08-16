@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PropertyChanged;
+using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace QueimaApp.Models
 {
+    [Table("Concursos")]
+    [ImplementPropertyChanged]
     public class Concurso
     {
+        [PrimaryKey]
         public int Id { get; set; }
         public TipoConcurso TipoConcurso { get; set; }
         public string DataInicio { get; set; }

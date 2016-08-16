@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace QueimaApp.Models
 {
+    [Table("Transportes")]
     [ImplementPropertyChanged]
     public class Transporte
     {
         [PrimaryKey]
-        public int Id { get; set; } 
+        public int Id { get; set; }
         // Nome do Tipo de Transporte (STCP, Metro ou Taxi)
         public TipoTransporte Nome { get; set; }
         // Link para informações adicionais
@@ -32,6 +33,6 @@ namespace QueimaApp.Models
     {
         STCP,
         Metro,
-        Taxi,
+        Taxi
     }
 }

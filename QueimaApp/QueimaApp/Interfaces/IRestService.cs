@@ -20,5 +20,7 @@ namespace QueimaApp.Interfaces
         Task<List<Concurso>> ConcursosRefreshAsync();
 
         Task<List<Media>> MediaRefreshAsync();
+
+
     }
 }

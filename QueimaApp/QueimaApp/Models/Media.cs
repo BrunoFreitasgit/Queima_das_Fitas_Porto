@@ -1,4 +1,5 @@
-﻿using SQLite.Net.Attributes;
+﻿using PropertyChanged;
+using SQLite.Net.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace QueimaApp.Models
 {
+    [Table("Media")]
+    [ImplementPropertyChanged]
     public class Media
     {
         [PrimaryKey]

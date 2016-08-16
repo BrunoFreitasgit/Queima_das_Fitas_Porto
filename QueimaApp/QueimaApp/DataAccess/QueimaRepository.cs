@@ -10,18 +10,16 @@ using Xamarin.Forms;
 
 namespace QueimaApp.DataAccess
 {
-    public class QueimaRepository
+    public class QueimaRepository : IQueimaRepository
     {
         SQLiteConnection dbConn;
         public QueimaRepository()
         {
-            // Construtor testes locais
             dbConn = DependencyService.Get<ISQLite>().GetConnection();
 
             // create the table(s)
             cleanDb();
             createTables();
-
             InitializeDataTest();
         }
 
@@ -40,13 +38,43 @@ namespace QueimaApp.DataAccess
             dbConn.CreateTable<AtividadeAcademica>();
             dbConn.CreateTable<Artista>();
             dbConn.CreateTable<Concurso>();
+            dbConn.CreateTable<Bilhete>();
             dbConn.CreateTable<Bilheteira>();
             dbConn.CreateTable<Media>();
             dbConn.CreateTable<Transporte>();
         }
+
         public List<AtividadeAcademica> GetAllAtividades()
         {
             return dbConn.Query<AtividadeAcademica>("Select * From [AtividadeAcademica]");
+        }
+        public List<Concurso> GetConcursoByType(int c)
+        {
+            var filtred_concurso = new List<Concurso>();
+
+            filtred_concurso = (from a in dbConn.Table<Concurso>()
+                                where a.TipoConcurso.Equals(c)
+                                select a).ToList();
+
+            return filtred_concurso;
+        }
+        public List<Media> GetMediaByType(int t)
+        {
+            var filtred_media = new List<Media>();
+
+            filtred_media = (from a in dbConn.Table<Media>()
+                             where a.TipoMedia.Equals(t)
+                             select a).ToList();
+
+            return filtred_media;
+        }
+        public Bilheteira GetBilheteira()
+        {
+            var table = dbConn.Table<Bilheteira>();
+
+            var bilheteira = table.SingleOrDefault(b => b.Id != 0);
+
+            return bilheteira;
         }
         public List<Artista> GetArtistaByPalco(int p)
         {
@@ -62,6 +90,53 @@ namespace QueimaApp.DataAccess
 
             return filtred_artistas;
         }
+        public Transporte GetTransporteByType(int t)
+        {
+            var filtred_transporte = new Transporte();
+            TipoTransporte tt = (TipoTransporte)t;
+            var table = dbConn.Table<Transporte>();
+
+            filtred_transporte = table.Where(trans => trans.Nome == tt).Single();
+
+            return filtred_transporte;
+        }
+
+
+
+        public void SaveAtividades(List<AtividadeAcademica> atividades)
+        {
+            dbConn.Delete("AtividadesAcademicas");
+            dbConn.InsertAll(atividades);
+        }
+        public void SaveArtistas(List<Artista> artistas)
+        {
+            dbConn.Delete("Artistas");
+            dbConn.InsertAll(artistas);
+        }
+        public void SaveConcursos(List<Concurso> Concursos)
+        {
+            dbConn.Delete("Concursos");
+            dbConn.InsertAll(Concursos);
+        }
+        public void SaveMedia(List<Media> media)
+        {
+            dbConn.Delete("Media");
+            dbConn.InsertAll(media);
+        }
+        public void SaveTransportes(List<Transporte> transportes)
+        {
+            dbConn.Delete("Transportes");
+            dbConn.InsertAll(transportes);
+        }
+        public void SaveBilheteiras(Bilheteira bilheteira)
+        {
+            dbConn.Delete("Bilheteira");
+            dbConn.Delete("Bilhetes");
+            var bilhetes = bilheteira.Bilhetes;
+            dbConn.InsertAll(bilhetes);
+            dbConn.Insert(bilheteira);
+        }
+
         void InitializeDataTest()
         {
             // ATIVIDADES ACADEMICAS
@@ -201,7 +276,7 @@ namespace QueimaApp.DataAccess
                }
             };
             dbConn.InsertAll(atividades);
-            
+
             // ARTISTAS
             var artistas = new List<Artista>
             {

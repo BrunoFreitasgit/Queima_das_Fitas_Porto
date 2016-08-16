@@ -5,7 +5,7 @@ using System;
 
 namespace QueimaApp.Models
 {
-    [Table("Artista")]
+    [Table("Artistas")]
     [ImplementPropertyChanged]
     public class Artista
     {

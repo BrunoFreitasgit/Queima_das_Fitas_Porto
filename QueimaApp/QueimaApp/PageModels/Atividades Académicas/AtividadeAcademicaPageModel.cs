@@ -9,16 +9,16 @@ namespace QueimaApp.PageModels
     [ImplementPropertyChanged]
     public class AtividadeAcademicaPageModel : FreshBasePageModel
     {
-        IDatabaseService _dataService;
+
+
         public AtividadeAcademica AtividadeAcademica { get; set; }
         public bool IsPrecoVisible { get; set; }
         public bool IsPontoVendaVisible { get; set; }
         public string Titulo { get; set; }
-        public AtividadeAcademicaPageModel(IDatabaseService dataService)
+        public AtividadeAcademicaPageModel()
         {
-            _dataService = dataService;
+
         }
-        public AtividadeAcademicaPageModel(){}
 
         public override void ReverseInit(object returndData)
         {
@@ -46,7 +46,8 @@ namespace QueimaApp.PageModels
         {
             get
             {
-                return new Command(async () => {
+                return new Command(async () =>
+                {
                     // TODO
                     // PUSH MAPVIEW WITH COORDINATES
                     await CoreMethods.PushPageModel<AtividadeMapaPageModel>(AtividadeAcademica);

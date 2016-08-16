@@ -82,9 +82,9 @@ namespace QueimaApp.Services
         {
             AtividadesAcademicas = new List<AtividadeAcademica>();
 
-            // RestUrl = http://developer.xamarin.com:8081/api/
-            var uri = new Uri(string.Format(Helpers.Constants.RestUrl, Helpers.Constants.AtividadesUrl));
-
+            
+            var uri = new Uri(string.Format(Helpers.Constants.RestUrl, string.Empty));
+           
             try
             {
                 var response = await client.GetAsync(uri);

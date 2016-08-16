@@ -1,4 +1,5 @@
 ﻿using FreshMvvm;
+using Plugin.Connectivity;
 using PropertyChanged;
 using QueimaApp.Interfaces;
 using QueimaApp.Models;
@@ -15,12 +16,15 @@ namespace QueimaApp.PageModels
     [ImplementPropertyChanged]
     public class AtividadesListPageModel : FreshBasePageModel
     {
-        IDatabaseService _databaseService;
+        IQueimaRepository _repository;
+        IRestService _restService;
         AtividadeAcademica _selectedAtividade;
 
-        public AtividadesListPageModel(IDatabaseService databaseService)
+
+        public AtividadesListPageModel(IQueimaRepository repo, IRestService restService)
         {
-            _databaseService = databaseService;
+            _repository = repo;
+            _restService = restService;
         }
 
         public ObservableCollection<AtividadeAcademica> Atividades { get; set; }
@@ -28,7 +32,7 @@ namespace QueimaApp.PageModels
         public override void Init(object initData)
         {
             //Atividades = new ObservableCollection<AtividadeAcademica>(_databaseService.GetAtividades());
-            Atividades = new ObservableCollection<AtividadeAcademica>(App.QueimaDA.GetAllAtividades());
+            Atividades = new ObservableCollection<AtividadeAcademica>(_repository.GetAllAtividades());
 
         }
 
@@ -71,5 +75,38 @@ namespace QueimaApp.PageModels
                 });
             }
         }
+
+        public bool IsBusy { get; set; }
+        Command refreshCommand;
+
+        public Command RefreshCommand
+        {
+            get { return refreshCommand ?? (refreshCommand = new Command(async () => await ExecuteRefreshCommand())); }
+        }
+
+        async Task ExecuteRefreshCommand()
+        {
+            if (IsBusy)
+                return;
+            if (!CrossConnectivity.Current.IsConnected){
+                await CurrentPage.DisplayAlert("Erro", "Tem de ter uma conexão à Internet", "OK");
+            }
+            IsBusy = true;
+            Atividades.Clear();
+
+            var atividades_temp = await _restService.AtividadesRefreshAsync();
+            if (atividades_temp != null)
+            {
+                _repository.SaveAtividades(atividades_temp);
+            }
+
+
+            IsBusy = false;
+
+            await CurrentPage.DisplayAlert("Refreshed", "You just refreshed the page! Nice job!", "OK");
+            return;
+
+        }
+
     }
 }
