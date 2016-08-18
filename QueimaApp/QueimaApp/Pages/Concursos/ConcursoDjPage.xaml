@@ -1,6 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
              x:Class="QueimaApp.Pages.ConcursoDjPage">
-  <Label Text="Secção concurso DJ" VerticalOptions="Center" HorizontalOptions="Center" />
+
+  <StackLayout Orientation="Vertical">
+    <Image Grid.Row="0" Aspect="AspectFill" Source="{Binding Concurso.ImagemUrl}"/>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Começa a " FontAttributes="Bold" FontSize="Medium" />
+      <Label Text="{Binding Concurso.DataInicio, StringFormat='{0:dd/mm/yyyy}'}" FontSize="Medium" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Termina a "  FontAttributes="Bold" FontSize="Medium"  />
+      <Label Text="{Binding Concurso.DataFim, StringFormat='{0:dd/mm/yyyy}'}" FontSize="Medium" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Descrição: "  FontAttributes="Bold" FontSize="Medium" />
+      <Label  Text="{Binding Concurso.Descricao}" FontSize="Medium" />
+    </StackLayout>
+  </StackLayout>
 </ContentPage>

@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.AtividadesListPage"
              xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              Title ="Atividades Académicas">
+
   <ContentPage.ToolbarItems>
   </ContentPage.ToolbarItems>
   <local:BasePage.Content>
+    <!--
     <ListView ItemsSource="{Binding Atividades}" SelectedItem="{Binding SelectedAtividade}" x:Name ="listView" IsPullToRefreshEnabled="True"
                RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
       <ListView.ItemTemplate>
@@ -14,6 +17,36 @@
           <ImageCell Text="{Binding Nome}" Detail="{Binding Data}" ImageSource="{Binding ImagePath}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
-    </ListView>
+    </ListView>-->
+    <Grid RowSpacing="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height=".3*"/>
+        <RowDefinition Height=".7*"/>
+      </Grid.RowDefinitions >
+      <cv:CarouselView ItemsSource="{Binding Atividades}">
+        <cv:CarouselView.ItemTemplate>
+          <DataTemplate>
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImagePath}"/>
+              <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+                <Label TextColor="White" Text="{Binding Nome}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+              </StackLayout>
+            </Grid>
+          </DataTemplate>
+        </cv:CarouselView.ItemTemplate>
+      </cv:CarouselView>
+      <ListView Grid.Row="1" ItemsSource="{Binding Atividades}" SelectedItem="{Binding SelectedAtividade}" x:Name ="listView" IsPullToRefreshEnabled="True"
+             RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ImageCell Text="{Binding Nome}" Detail="{Binding Data}" ImageSource="{Binding ImagePath}"/>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </Grid>
   </local:BasePage.Content>
 </local:BasePage>

@@ -1,9 +1,12 @@
-﻿using QueimaApp.Interfaces;
+﻿using Newtonsoft.Json;
+using QueimaApp.Interfaces;
 using QueimaApp.Models;
 using SQLite.Net;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -439,6 +442,20 @@ namespace QueimaApp.DataAccess
                 },
             };
             dbConn.InsertAll(artistas);
+
+
+            // Concursos Teste local
+            var assembly = typeof(QueimaRepository).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream("QueimaApp.Json_test.concursos.json");
+
+            List<Concurso> myData;
+            using (var reader = new StreamReader(stream))
+            {
+
+                JsonSerializer serializer = new JsonSerializer();
+                myData = (List<Concurso>)serializer.Deserialize(reader, typeof(List<Concurso>));
+            }
+            dbConn.InsertAll(myData);
         }
     }
 }

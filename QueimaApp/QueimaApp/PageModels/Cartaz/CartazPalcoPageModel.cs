@@ -42,6 +42,7 @@ namespace QueimaApp.PageModels
                     ArtistaSelected.Execute(value);
             }
         }
+
         public Command<Artista> ArtistaSelected
         {
             get
