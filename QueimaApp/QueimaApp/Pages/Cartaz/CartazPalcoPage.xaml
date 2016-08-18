@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.CartazPalcoPage">
+
   <ContentPage.Content>
     <ListView ItemsSource="{Binding Artistas}" SelectedItem="{Binding SelectedArtista}" x:Name ="listView" >
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ImageCell Text="{Binding Nome}" Detail="{Binding Data}" ImageSource="{Binding ImagemUri}"/>
+          <TextCell  Text="{Binding Nome}" />
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

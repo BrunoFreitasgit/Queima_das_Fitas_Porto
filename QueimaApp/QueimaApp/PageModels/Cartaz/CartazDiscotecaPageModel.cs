@@ -18,7 +18,6 @@ namespace QueimaApp.PageModels
     {
         IDatabaseService _databaseService;
         Artista _selectedArtista;
-        private static int Discoteca = 1;
         public ObservableCollection<Artista> Artistas { get; set; }
         public CartazDiscotecaPageModel(IDatabaseService databaseService)
         {
@@ -28,7 +27,7 @@ namespace QueimaApp.PageModels
         public override void Init(object initData)
         {
             //Artistas = new ObservableCollection<Artista>(_databaseService.GetArtistasByPalco(Discoteca));
-            Artistas = new ObservableCollection<Artista>(App.QueimaDA.GetArtistaByPalco(Discoteca));
+            Artistas = new ObservableCollection<Artista>(App.QueimaDA.GetArtistaByPalco((int)Palco.Discoteca));
         }
 
         public Artista SelectedArtista

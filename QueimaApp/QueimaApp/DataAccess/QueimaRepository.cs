@@ -28,6 +28,7 @@ namespace QueimaApp.DataAccess
             dbConn.DropTable<AtividadeAcademica>();
             dbConn.DropTable<Artista>();
             dbConn.DropTable<Concurso>();
+            dbConn.DropTable<Bilhete>();
             dbConn.DropTable<Bilheteira>();
             dbConn.DropTable<Media>();
             dbConn.DropTable<Transporte>();
@@ -46,7 +47,7 @@ namespace QueimaApp.DataAccess
 
         public List<AtividadeAcademica> GetAllAtividades()
         {
-            return dbConn.Query<AtividadeAcademica>("Select * From [AtividadeAcademica]");
+            return dbConn.Query<AtividadeAcademica>("Select * From [AtividadesAcademicas]");
         }
         public List<Concurso> GetConcursoByType(int c)
         {
@@ -85,7 +86,7 @@ namespace QueimaApp.DataAccess
             var filtred_artistas = new List<Artista>();
 
             filtred_artistas = (from a in dbConn.Table<Artista>()
-                                where a.Palco.Equals(palco)
+                                where a.Palco.Equals(p)
                                 select a).ToList<Artista>();
 
             return filtred_artistas;
@@ -286,7 +287,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,01),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -298,7 +299,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,01),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -310,7 +311,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,02),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -322,7 +323,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,02),
                     Nome = "Artista 1",
-                    Palco =0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -334,7 +335,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,02),
                     Nome = "Artista 1",
-                    Palco = 1,
+                    Palco = Palco.Discoteca,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -346,7 +347,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,03),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -358,7 +359,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,04),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -370,7 +371,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,04),
                     Nome = "Artista 1",
-                    Palco =0,
+                    Palco =Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -382,7 +383,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,05),
                     Nome = "Artista 1",
-                    Palco = 1,
+                    Palco = Palco.Discoteca,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -394,7 +395,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,05),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -406,7 +407,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,06),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -418,7 +419,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher.... Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,06),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",
@@ -430,7 +431,7 @@ namespace QueimaApp.DataAccess
                     Biografia = "Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher Isto é uma biografia enorme, é capaz de ter trezentas linhas de texto só para encher ",
                     DataAtuacao = new DateTime(2017,05,07),
                     Nome = "Artista 1",
-                    Palco = 0,
+                    Palco = Palco.PalcoPrincipal,
                     FacebookUrl = "https://www.facebook.com/FAP1989",
                     SpotifyUrl = "spotify:artist:44gRHbEm4Uqa0ykW0rDTNk",
                     TwitterUrl = "https://twitter.com/skunkanansie",

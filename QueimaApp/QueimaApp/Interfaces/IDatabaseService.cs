@@ -13,7 +13,7 @@ namespace QueimaApp.Interfaces
         List<PontoVenda> GetPontosVenda();
         List<Barraca> GetBarracas();
         List<Bilhete> GetBilhetes();
-        List<Artista> GetArtistas();
-        List<Artista> GetArtistasByPalco(int p);
+        //List<Artista> GetArtistas();
+        //List<Artista> GetArtistasByPalco(int p);
     }
 }

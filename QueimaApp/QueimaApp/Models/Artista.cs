@@ -13,7 +13,7 @@ namespace QueimaApp.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Biografia { get; set; }
-        public int Palco { get; set; }
+        public Palco Palco { get; set; }
         public DateTime DataAtuacao { get; set; }
         public string ImagemUri { get; set; }
         public string FacebookUrl { get; set; }
@@ -24,6 +24,6 @@ namespace QueimaApp.Models
     public enum Palco
     {
         PalcoPrincipal,
-        Disoteca
+        Discoteca
     }
 }

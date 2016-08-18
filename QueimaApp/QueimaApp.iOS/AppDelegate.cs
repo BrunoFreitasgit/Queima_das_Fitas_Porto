@@ -6,6 +6,7 @@ using Foundation;
 using UIKit;
 using ImageCircle.Forms.Plugin.iOS;
 using TK.CustomMap.iOSUnified;
+using CarouselView.FormsPlugin.iOS;
 
 namespace QueimaApp.iOS
 {
@@ -26,6 +27,7 @@ namespace QueimaApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsMaps.Init();
+            CarouselViewRenderer.Init();
             TKCustomMapRenderer.InitMapRenderer();
             ImageCircleRenderer.Init();
             LoadApplication(new App());

@@ -6,7 +6,7 @@
     <ListView ItemsSource="{Binding Artistas}" SelectedItem="{Binding SelectedArtista}" x:Name="listView">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ImageCell Text="{Binding Nome}" Detail="{Binding Data}" ImageSource="{Binding ImagemUri}"/>
+          <TextCell  Text="{Binding Nome}" />
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

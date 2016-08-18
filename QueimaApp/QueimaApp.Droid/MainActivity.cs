@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using ImageCircle.Forms.Plugin.Droid;
+using CarouselView.FormsPlugin.Android;
 
 namespace QueimaApp.Droid
 {
@@ -23,6 +24,8 @@ namespace QueimaApp.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Xamarin.FormsMaps.Init(this, bundle);
+            CarouselViewRenderer.Init();
+            
             ImageCircleRenderer.Init();
             LoadApplication(new App());
         }
