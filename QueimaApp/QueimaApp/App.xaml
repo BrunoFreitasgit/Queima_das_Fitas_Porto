@@ -4,13 +4,71 @@
              x:Class="QueimaApp.App">
   <Application.Resources>
     <ResourceDictionary>
+      <!-- Colors -->
+      <Color x:Key="BrandColor">#e53935</Color>
+      <Color x:Key="BrandColorLight">#f44336</Color>
+      <Color x:Key="BrandColorDark">#b71c1c</Color>
+      <Color x:Key="BrandAccentColor">#ff5252</Color>
+      <Color
+        x:FactoryMethod="FromRgba"
+        x:Key="PrimaryTextColor">
+        <x:Arguments>
+          <x:Double>0</x:Double>
+          <x:Double>0</x:Double>
+          <x:Double>0</x:Double>
+          <x:Double>0.87</x:Double>
+        </x:Arguments>
+      </Color>
+      <Color
+        x:FactoryMethod="FromRgba"
+        x:Key="SecondaryTextColor">
+        <x:Arguments>
+          <x:Double>0</x:Double>
+          <x:Double>0</x:Double>
+          <x:Double>0</x:Double>
+          <x:Double>0.54</x:Double>
+        </x:Arguments>
+      </Color>
+      <!-- Font Family -->
+      <OnPlatform
+        x:Key="RegularFontFamily"
+        x:TypeArguments="x:String"
+        iOS="HelveticaNeue" Android="sans-serif" WinPhone=""/>
+      <OnPlatform
+       x:Key="LightFontFamily"
+       x:TypeArguments="x:String"
+       iOS="HelveticaNeue-Light" Android="sans-serif-light" WinPhone=""/>
+      <OnPlatform
+        x:Key="MediumFontFamily"
+        x:TypeArguments="x:String"
+        iOS="HelveticaNeue-Medium" Android="sans-serif-medium" WinPhone=""/>
+      <!-- Font Sizes-->
+      <Font x:Key="ButtonFont" FontFamily="{StaticResource MediumFontFamily}">14</Font>
+      <Font x:Key="CaptionFont" FontSize="12" FontFamily="{StaticResource RegularFontFamily}" />
+      <Font x:Key="BodyFont" FontSize="14" FontFamily="{StaticResource RegularFontFamily}" />
+      <Font x:Key="Body2Font" FontSize="14" FontFamily="{StaticResource MediumFontFamily}" />
+      <Font x:Key="SubheadFont" FontSize="16" FontFamily="{StaticResource RegularFontFamily}" />
+      <Font x:Key="TitleFont" FontSize="20" FontFamily="{StaticResource MediumFontFamily}" />
+      <Font x:Key="HeadlineFont" FontSize="24" FontFamily="{StaticResource RegularFontFamily}" />
+      <Font x:Key="Display1Font" FontSize="34" FontFamily="{StaticResource RegularFontFamily}" />
+      <Font x:Key="Display2Font" FontSize="45" FontFamily="{StaticResource RegularFontFamily}" />
+      <Font x:Key="Display3Font" FontSize="56" FontFamily="{StaticResource RegularFontFamily}" />
+      <Font x:Key="Display4Font" FontSize="112" FontFamily="{StaticResource LightFontFamily}" />
 
       <!-- Styles -->
       <Style TargetType="NavigationPage">
         <Setter Property="BarBackgroundColor" Value="#f44336"/>
-        <Setter Property="BarTextColor" Value="White"/>
+        <!--Red -->
+        <Setter Property="BarTextColor" Value="fafafa"/>
       </Style>
-      <!-- Styles -->
+      <Style x:Key="TitleLable" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}"/>
+        <Setter Property="Font" Value="{StaticResource TitleFont}"/>
+      </Style>
+      <Style x:Key="SubheadLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+        <Setter Property="Font" Value="{StaticResource SubheadFont}"/>
+      </Style>
 
     </ResourceDictionary>
   </Application.Resources>
