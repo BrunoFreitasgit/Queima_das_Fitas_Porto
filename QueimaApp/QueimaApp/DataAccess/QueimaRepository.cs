@@ -82,10 +82,6 @@ namespace QueimaApp.DataAccess
         }
         public List<Artista> GetArtistaByPalco(int p)
         {
-            string palco;
-            if (p == 0) palco = "Palco Principal";
-            else palco = "Discoteca";
-
             var filtred_artistas = new List<Artista>();
 
             filtred_artistas = (from a in dbConn.Table<Artista>()

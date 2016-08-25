@@ -5,7 +5,7 @@
   <Application.Resources>
     <ResourceDictionary>
       <!-- Colors -->
-      <Color x:Key="BrandColor">#e53935</Color>
+     <Color x:Key="BrandColor">#e53935</Color>
       <Color x:Key="BrandColorLight">#f44336</Color>
       <Color x:Key="BrandColorDark">#b71c1c</Color>
       <Color x:Key="BrandAccentColor">#ff5252</Color>
@@ -29,7 +29,7 @@
           <x:Double>0.54</x:Double>
         </x:Arguments>
       </Color>
-      <!-- Font Family -->
+        <!-- Font Family -->
       <OnPlatform
         x:Key="RegularFontFamily"
         x:TypeArguments="x:String"
@@ -57,9 +57,8 @@
 
       <!-- Styles -->
       <Style TargetType="NavigationPage">
-        <Setter Property="BarBackgroundColor" Value="#f44336"/>
-        <!--Red -->
-        <Setter Property="BarTextColor" Value="fafafa"/>
+        <Setter Property="BarBackgroundColor" Value="#e53935"/><!--Red -->       
+        <Setter Property="BarTextColor" Value="#fafafa"/>
       </Style>
       <Style x:Key="TitleLable" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}"/>

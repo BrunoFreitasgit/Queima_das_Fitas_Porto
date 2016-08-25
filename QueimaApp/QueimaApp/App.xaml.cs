@@ -6,7 +6,7 @@ using QueimaApp.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+//[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace QueimaApp
 {
 
@@ -28,6 +28,7 @@ namespace QueimaApp
 
         public App()
         {
+            InitializeComponent();
             FreshIOC.Container.Register<IDatabaseService, DatabaseService>();
             FreshIOC.Container.Register<IRestService, RestService>();
             FreshIOC.Container.Register<IQueimaRepository, QueimaRepository>();

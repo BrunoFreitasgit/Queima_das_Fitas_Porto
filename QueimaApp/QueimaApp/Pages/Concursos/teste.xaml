@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QueimaApp.Pages.Concursos.teste">
+  <ContentPage.Content>
+    <StackLayout Padding="5, 25">
+   <!--Grid VerticalOptions="FillAndExpand"
+      RowSpacing="10"
+      ColumnSpacing="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.3*" />
+        <RowDefinition Height="0.2*" />
+        <RowDefinition Height="0.5*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <BoxView  Color="Aqua" Grid.Row ="1" Grid.Column="3">
+
+      </BoxView>
+      <Label Grid.Row="2" Grid.Column="2" Text="Boas" />
+    </Grid> -->
+
+      <Label Text="Boas"
+             Font="Bold,Large"
+             HorizontalOptions="Center" />
+      <StackLayout Padding="50, 10">
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Family:"
+                 HorizontalOptions="FillAndExpand" />
+          <Label Text="boas"
+                 Font="Bold,Medium" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Subfamily:"
+                 HorizontalOptions="FillAndExpand" />
+          <Label Text="boas"
+                 Font="Bold,Medium" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Tribe:"
+                  HorizontalOptions="FillAndExpand" />
+          <Label Text="boas"
+                 Style="{StaticResource TitleLabel}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Genus:"
+                 HorizontalOptions="FillAndExpand" />
+          <Label Text="Boas"
+                 Font="Bold,Medium" />
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

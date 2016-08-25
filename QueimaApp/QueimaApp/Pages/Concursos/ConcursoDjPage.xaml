@@ -4,19 +4,20 @@
              xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
              x:Class="QueimaApp.Pages.ConcursoDjPage">
 
+
   <StackLayout Orientation="Vertical">
-    <Image Grid.Row="0" Aspect="AspectFill" Source="{Binding Concurso.ImagemUrl}"/>
+    <Image  Aspect="AspectFill" Source="{Binding Concurso.ImagemUrl}" />
     <StackLayout Orientation="Horizontal">
-      <Label Text="Começa a " FontAttributes="Bold" FontSize="Medium" />
-      <Label Text="{Binding Concurso.DataInicio, StringFormat='{0:dd/mm/yyyy}'}" FontSize="Medium" />
+      <Label Text="De " Style="{StaticResource TitleLable}"   HorizontalOptions="Start"/>
+      <Label Text="{Binding Concurso.DataInicio, StringFormat='{0:dd/mm/yyyy}'}"  HorizontalOptions="FillAndExpand"/>
     </StackLayout>
     <StackLayout Orientation="Horizontal">
-      <Label Text="Termina a "  FontAttributes="Bold" FontSize="Medium"  />
-      <Label Text="{Binding Concurso.DataFim, StringFormat='{0:dd/mm/yyyy}'}" FontSize="Medium" />
+      <Label Text="A:"  Style="{StaticResource TitleLable}" HorizontalOptions="Start"/>
+      <Label Text="{Binding Concurso.DataFim, StringFormat='{0:dd/mm/yyyy}'}" HorizontalOptions="FillAndExpand" />
     </StackLayout>
     <StackLayout Orientation="Horizontal">
-      <Label Text="Descrição: "  FontAttributes="Bold" FontSize="Medium" />
-      <Label  Text="{Binding Concurso.Descricao}" FontSize="Medium" />
+      <Label Text="Descrição: " Style="{StaticResource TitleLable}"  HorizontalOptions="FillAndExpand"/>
     </StackLayout>
+    <Label Text="{Binding Concurso.Descricao}" FontSize="Medium" />
   </StackLayout>
 </ContentPage>
