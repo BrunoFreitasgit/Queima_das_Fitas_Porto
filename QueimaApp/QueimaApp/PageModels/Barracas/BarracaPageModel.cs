@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TK.CustomMap;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -16,7 +17,7 @@ namespace QueimaApp.PageModels
     public class BarracaPageModel : FreshBasePageModel
     {
         public Barraca Barraca { get; set; }
-        readonly Geocoder _Geocoder;
+
         public string Titulo { get; set; }
         public bool IsBusy { get; set; }
         public bool TemEvento { get; set; }
@@ -24,7 +25,7 @@ namespace QueimaApp.PageModels
         Command _OpenUrlCommand;
         public BarracaPageModel()
         {
-            _Geocoder = new Geocoder();
+
         }
         public override void Init(object initData)
         {
@@ -35,8 +36,19 @@ namespace QueimaApp.PageModels
                 if (Barraca.Longitude != 0 && Barraca.Latitude != 0)
                 {
                     TemLocalizacao = true;
-                    // mapa
 
+                    // mapa
+                    Pins = new ObservableCollection<TKCustomMapPin>();
+                    var Pin = new TKCustomMapPin
+                    {
+                        IsVisible = true,
+                        Title = Barraca.Nome,
+                        Position = new Position(Barraca.Latitude, Barraca.Longitude),
+                        ShowCallout = true
+                    };
+                    Pins.Add(Pin);
+                    MapCenter = new Position(Barraca.Latitude, Barraca.Longitude);
+                    MapRegion = MapSpan.FromCenterAndRadius(Pin.Position, Distance.FromKilometers(0.5));
                 }
                 else
                 {
@@ -81,6 +93,9 @@ namespace QueimaApp.PageModels
             }
         }
         // mapa
+        public ObservableCollection<TKCustomMapPin> Pins { get; set; }
+        public MapSpan MapRegion { get; set; }
+        public Position MapCenter { get; set; }
         public Position GetPosition()
         {
             if (!TemLocalizacao)

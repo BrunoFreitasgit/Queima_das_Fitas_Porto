@@ -38,6 +38,7 @@ namespace QueimaApp.PageModels
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
+            IsBusy = false;
             base.ViewIsAppearing(sender, e);
         }
 
@@ -110,6 +111,6 @@ namespace QueimaApp.PageModels
             return;
 
         }
-
+        
     }
 }
