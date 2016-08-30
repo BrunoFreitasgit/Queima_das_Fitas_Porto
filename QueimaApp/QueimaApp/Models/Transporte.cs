@@ -15,7 +15,7 @@ namespace QueimaApp.Models
         [PrimaryKey]
         public int Id { get; set; }
         // Nome do Tipo de Transporte (STCP, Metro ou Taxi)
-        public TipoTransporte Nome { get; set; }
+        public TipoTransporte TipoTransporte { get; set; }
         // Link para informações adicionais
         public string Url { get; set; }
         // Descrição do serviço de Transporte

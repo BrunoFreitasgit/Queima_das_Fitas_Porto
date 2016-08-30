@@ -96,7 +96,7 @@ namespace QueimaApp.DataAccess
             TipoTransporte tt = (TipoTransporte)t;
             var table = dbConn.Table<Transporte>();
 
-            filtred_transporte = table.Where(trans => trans.Nome == tt).Single();
+            filtred_transporte = table.Where(trans => trans.TipoTransporte == tt).Single();
 
             return filtred_transporte;
         }
@@ -452,6 +452,18 @@ namespace QueimaApp.DataAccess
                 myData = (List<Concurso>)serializer.Deserialize(reader, typeof(List<Concurso>));
             }
             dbConn.InsertAll(myData);
+
+
+            // transportes
+            Stream stream_transporte = assembly.GetManifestResourceStream("QueimaApp.Json_test.transportes.json");
+
+            List<Transporte> transportes;
+            using (var reader = new StreamReader(stream_transporte))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                transportes = (List<Transporte>)serializer.Deserialize(reader, typeof(List<Transporte>));
+            }
+            dbConn.InsertAll(transportes);
         }
     }
 }

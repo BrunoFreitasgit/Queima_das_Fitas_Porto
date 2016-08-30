@@ -1,0 +1,23 @@
+﻿[
+  {
+    "id": 1,
+    "tipoTransporte": 0,
+    "descricao": "STCP",
+    "imagemUrl": "http://etcetaljornal.pt/j/wp-content/uploads/2015/08/stcp-greve.jpg",
+    "url": "http://www.stcp.pt/pt/viajar/"
+  },
+  {
+    "id": 2,
+    "tipoTransporte": 1,
+    "descricao": "Metro",
+    "imagemUrl": "http://www.metrodoporto.pt/uploads/site/logo/1/MetroPorto-01.jpg",
+    "url": "https://www.metrodoporto.pt/"
+  },
+  {
+    "id": 3,
+    "tipoTransporte": 2,
+    "descricao": "Taxi",
+    "imagemUrl": "http://img.pai.pt/mysite/media/16/57/2/7d7d642b-8d7f-499b-80ac-51e2c8e64909.jpg",
+    "url": ""
+  }
+]

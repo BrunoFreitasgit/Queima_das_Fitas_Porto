@@ -2,5 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueimaApp.Pages.TransporteMetroPage">
-  <Label Text="Metro" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="3*"/>
+        <RowDefinition Height="7*"/>
+      </Grid.RowDefinitions>
+      <Image Source="{Binding Transporte.ImagemUrl}" Grid.RowSpan="1" Aspect="AspectFill" HorizontalOptions="FillAndExpand"/>
+      <Label Text="{Binding Transporte.Descricao}" VerticalOptions="Center" HorizontalOptions="Center" Grid.RowSpan="2"/>
+    </Grid>
+  </ContentPage.Content>
+
 </ContentPage>

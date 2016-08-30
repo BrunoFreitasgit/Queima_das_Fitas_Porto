@@ -178,6 +178,7 @@
     <EmbeddedResource Include="Json_test\barracas.json" />
     <EmbeddedResource Include="Json_test\barracas_teste.json" />
     <EmbeddedResource Include="Json_test\concursos.json" />
+    <EmbeddedResource Include="Json_test\transportes.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
