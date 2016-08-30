@@ -28,6 +28,7 @@ namespace QueimaApp.Pages
             instaPage.Title = "Instagram";
             facebookPage.Icon = "icon.png";
             instaPage.Icon = "icon.png";
+            this.BarBackgroundColor = (Color)Application.Current.Resources["BrandColorDark"];
             this.Children.Add(facebookPage);
             this.Children.Add(instaPage);
 

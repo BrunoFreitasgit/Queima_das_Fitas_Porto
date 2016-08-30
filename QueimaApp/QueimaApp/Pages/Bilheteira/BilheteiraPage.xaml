@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:QueimaApp;assembly=QueimaApp"
              x:Class="QueimaApp.Pages.BilheteiraPage">
   <TabbedPage.Children>
-    
+
   </TabbedPage.Children>
 </TabbedPage>

@@ -66,8 +66,10 @@ namespace QueimaApp.PageModels
 
         public Command<AtividadeAcademica> AtividadeSelected
         {
+
             get
             {
+                IsBusy = true;
                 return new Command<AtividadeAcademica>(async (atividade) =>
                 {
                     await CoreMethods.PushPageModel<AtividadeAcademicaPageModel>(atividade);
@@ -88,7 +90,8 @@ namespace QueimaApp.PageModels
         {
             if (IsBusy)
                 return;
-            if (!CrossConnectivity.Current.IsConnected){
+            if (!CrossConnectivity.Current.IsConnected)
+            {
                 await CurrentPage.DisplayAlert("Erro", "Tem de ter uma conexão à Internet", "OK");
             }
             IsBusy = true;

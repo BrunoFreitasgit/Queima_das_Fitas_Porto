@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace QueimaApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainMenuPage : BasePage
+    public partial class IntroPage : ContentPage
     {
-        public MainMenuPage()
+        public IntroPage()
         {
             InitializeComponent();
         }

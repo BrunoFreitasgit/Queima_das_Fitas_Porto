@@ -27,6 +27,7 @@ namespace QueimaApp.Pages
             bilhetesPage.Title = "Bilhetes";
             pontosVendaPage.Icon = "icon.png";
             bilhetesPage.Icon = "icon.png";
+            this.BarBackgroundColor = (Color)Application.Current.Resources["BrandColorDark"];
             this.Children.Add(pontosVendaPage);
             this.Children.Add(bilhetesPage);
             InitializeComponent();

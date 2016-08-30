@@ -8,15 +8,15 @@
   <StackLayout Orientation="Vertical">
     <Image  Aspect="AspectFill" Source="{Binding Concurso.ImagemUrl}" />
     <StackLayout Orientation="Horizontal">
-      <Label Text="De " Style="{StaticResource TitleLable}"   HorizontalOptions="Start"/>
+      <Label Text="De " Style="{StaticResource TitleLabel}"   HorizontalOptions="Start"/>
       <Label Text="{Binding Concurso.DataInicio, StringFormat='{0:dd/mm/yyyy}'}"  HorizontalOptions="FillAndExpand"/>
     </StackLayout>
     <StackLayout Orientation="Horizontal">
-      <Label Text="A:"  Style="{StaticResource TitleLable}" HorizontalOptions="Start"/>
+      <Label Text="A:"  Style="{StaticResource TitleLabel}" HorizontalOptions="Start"/>
       <Label Text="{Binding Concurso.DataFim, StringFormat='{0:dd/mm/yyyy}'}" HorizontalOptions="FillAndExpand" />
     </StackLayout>
     <StackLayout Orientation="Horizontal">
-      <Label Text="Descrição: " Style="{StaticResource TitleLable}"  HorizontalOptions="FillAndExpand"/>
+      <Label Text="Descrição: " Style="{StaticResource TitleLabel}"  HorizontalOptions="FillAndExpand"/>
     </StackLayout>
     <Label Text="{Binding Concurso.Descricao}" FontSize="Medium" />
   </StackLayout>

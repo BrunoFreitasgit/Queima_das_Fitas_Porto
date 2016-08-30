@@ -7,7 +7,7 @@
     <ListView ItemsSource="{Binding PontosVenda}" SelectedItem="{Binding SelectedPontoVenda}" x:Name="listView">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <TextCell Text="{Binding Nome}" Detail="{Binding Local}"></TextCell>
+          <TextCell Text="{Binding Nome}" TextColor="{StaticResource PrimaryTextColor}" Detail="{Binding Local}"></TextCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

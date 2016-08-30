@@ -18,16 +18,17 @@ namespace QueimaApp.Pages
         {
             this.Init("Menu", "Menu.png");
             AddPages();
-            //var loginPage = FreshPageModelResolver.ResolvePageModel<LoginFacebookMockPageModel>();
+            var introPage = FreshPageModelResolver.ResolvePageModel<IntroPageModel>();
             //var atividadesPage = FreshPageModelResolver.ResolvePageModel<AtividadesListPageModel>();
-            //if(Device.OS == TargetPlatform.iOS)
-            //{
-            //    PushPage(new NavigationPage(atividadesPage), null, true);
-            //}else
-            //{
-            //    PushPage(atividadesPage, null, true);
-            //}
-            
+            if (Device.OS == TargetPlatform.iOS)
+            {
+                PushPage(new NavigationPage(introPage), null, true);
+            }
+            else
+            {
+                PushPage(introPage, null, true);
+            }
+
         }
 
         private void AddPages()
@@ -40,7 +41,7 @@ namespace QueimaApp.Pages
             AddPageWithIcon<ConcursosPageModel>("Concursos", "icon.png", null);
             AddPageWithIcon<TransportesPageModel>("Transportes", "icon.png", null);
         }
-
+        
         protected override void CreateMenuPage(string menuPageTitle, string menuIcon = null)
         {
             listview = new ListView();
@@ -86,14 +87,16 @@ namespace QueimaApp.Pages
         protected override Page CreateContainerPage(Page page)
         {
             var navigation = new NavigationPage(page);
-            if(Device.OS == TargetPlatform.iOS)
+            if (Device.OS == TargetPlatform.iOS)
             {
-                navigation.BarTextColor = Color.Red;
-            }else
+                navigation.BarTextColor = (Color)Application.Current.Resources["BrandColorDark"];
+            }
+            else
             {
                 navigation.BarTextColor = Color.White;
+                navigation.BarBackgroundColor = (Color)Application.Current.Resources["BrandColorDark"];
             }
-            
+
             return navigation;
         }
 

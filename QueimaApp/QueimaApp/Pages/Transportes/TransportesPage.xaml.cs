@@ -30,6 +30,7 @@ namespace QueimaApp.Pages
             taxiPage.Icon = "icon.png";
             stcpPage.Icon = "icon.png";
             metroPage.Icon = "icon.png";
+            this.BarBackgroundColor = (Color)Application.Current.Resources["BrandColorDark"];
             this.Children.Add(stcpPage);
             this.Children.Add(metroPage);
             this.Children.Add(taxiPage);

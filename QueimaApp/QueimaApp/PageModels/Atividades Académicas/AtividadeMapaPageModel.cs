@@ -44,6 +44,7 @@ namespace QueimaApp.PageModels
         }
         protected override void ViewIsAppearing(object sender, System.EventArgs e)
         {
+            
             Debug.WriteLine("View is appearing");
             base.ViewIsAppearing(sender, e);
         }

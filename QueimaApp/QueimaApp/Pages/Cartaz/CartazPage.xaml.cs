@@ -30,6 +30,7 @@ namespace QueimaApp.Pages
             palcoPage.Title = "Palco";
             discotecaPage.Icon = "icon.png";
             palcoPage.Icon = "icon.png";
+            this.BarBackgroundColor = (Color)Application.Current.Resources["BrandColorDark"];
             this.Children.Add(palcoPage);
             this.Children.Add(discotecaPage);
         }

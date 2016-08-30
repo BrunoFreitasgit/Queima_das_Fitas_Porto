@@ -12,7 +12,7 @@
       <ListView ItemsSource="{Binding Barracas}" SelectedItem="{Binding SelectedBarraca}" x:Name ="listView" >
         <ListView.ItemTemplate>
           <DataTemplate>
-            <TextCell Text="{Binding Nome}"/>
+            <TextCell Text="{Binding Nome}" TextColor="{StaticResource PrimaryTextColor}" />
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>

@@ -43,7 +43,7 @@
              RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
         <ListView.ItemTemplate>
           <DataTemplate>
-            <ImageCell Text="{Binding Nome}" Detail="{Binding Data}" ImageSource="{Binding ImagePath}"/>
+            <ImageCell Text="{Binding Nome}" TextColor="{StaticResource PrimaryTextColor}" Detail="{Binding Data}" ImageSource="{Binding ImagePath}"/>
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>

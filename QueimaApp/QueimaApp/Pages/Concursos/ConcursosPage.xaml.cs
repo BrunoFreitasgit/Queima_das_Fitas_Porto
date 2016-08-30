@@ -29,6 +29,7 @@ namespace QueimaApp.Pages
             djPage.Icon = "icon.png";
             cartazPage.Icon = "icon.png";
             bandasPage.Icon = "icon.png";
+            this.BarBackgroundColor = (Color)Application.Current.Resources["BrandColorDark"];
             this.Children.Add(djPage);
             this.Children.Add(cartazPage);
             this.Children.Add(bandasPage);

@@ -3,10 +3,12 @@ using PropertyChanged;
 using QueimaApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace QueimaApp.PageModels
 {
@@ -14,12 +16,16 @@ namespace QueimaApp.PageModels
     public class BarracaPageModel : FreshBasePageModel
     {
         public Barraca Barraca { get; set; }
-
+        readonly Geocoder _Geocoder;
         public string Titulo { get; set; }
-
+        public bool IsBusy { get; set; }
         public bool TemEvento { get; set; }
         public bool TemLocalizacao { get; set; }
         Command _OpenUrlCommand;
+        public BarracaPageModel()
+        {
+            _Geocoder = new Geocoder();
+        }
         public override void Init(object initData)
         {
             if (initData != null)
@@ -29,6 +35,8 @@ namespace QueimaApp.PageModels
                 if (Barraca.Longitude != 0 && Barraca.Latitude != 0)
                 {
                     TemLocalizacao = true;
+                    // mapa
+
                 }
                 else
                 {
@@ -47,6 +55,8 @@ namespace QueimaApp.PageModels
             {
                 Barraca = new Barraca();
             }
+
+            IsBusy = false;
         }
 
         public Command OpenUrlCommand
@@ -70,5 +80,22 @@ namespace QueimaApp.PageModels
                 Device.OpenUri(url);
             }
         }
+        // mapa
+        public Position GetPosition()
+        {
+            if (!TemLocalizacao)
+                return new Position(0, 0);
+
+            IsBusy = true;
+
+            Position p;
+
+            p = new Position(Barraca.Latitude, Barraca.Longitude);
+
+            IsBusy = false;
+
+            return p;
+        }
+
     }
 }
